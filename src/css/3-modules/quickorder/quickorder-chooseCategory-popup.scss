@@ -1,0 +1,38 @@
+.chooseCategory-content {
+	@media(max-width: $xs-max) {
+		padding: 15px;
+	}
+
+	&__row {
+		background: $white;
+		padding:25px 0 20px;
+		@media(min-width: $sm) {
+			padding: 15px 0 10px;
+		}
+	}
+	
+	&__buttons {
+		@media(max-width: $xs-max) {
+			position: fixed;
+		    bottom: 0;
+		    width: 100%;
+		    left: 0;
+		    height: 50px;
+		    .button--primary-white {
+		    	width: 100%;
+			    text-align: center;
+			    height: 50px;
+			    color: $white;
+			    background: $red;
+			    line-height: 26px;
+			    font-family: $Raleway-Bold;
+			    font-size: 12px;
+		    }
+		}
+		@media(min-width: $sm) {
+			margin:20px 15px 5px;
+			text-align: right;
+			position:relative;
+		}
+	}
+}

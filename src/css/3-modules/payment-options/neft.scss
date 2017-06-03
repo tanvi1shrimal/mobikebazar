@@ -1,0 +1,62 @@
+.beneficiary-details {
+	margin-bottom: 35px;
+	@media(min-width: $md) {
+		margin-bottom: 30px;
+	}
+}
+
+.beneficiary-name,
+.beneficiary-user-name {
+	margin: 0px;
+}
+
+.beneficiary-name {
+	font-size: 13px;
+	font-family: $OpenSans-Regular;
+	color: $black666;
+	margin-bottom: 15px;
+
+	@media(min-width: $sm) {
+		float: left;
+	}
+
+	@media(min-width: $md) {
+		font-size: 13px;
+		margin-bottom: 0px;
+
+	}
+}
+
+.beneficiary-user-name {
+	font-family: $OpenSans-Bold;
+	font-size: 14px;
+	color: $black333;
+
+	@media(min-width: $sm) {
+	text-align: right;
+	}
+}
+
+.check-payment-info {
+	span {
+		font-family: $OpenSans-Semibold;
+		color: rgba(51,51,51,.5);
+	}
+}
+
+.imps-details {
+	@media(min-width: $sm) {
+		margin-top: 15px;
+	}
+
+	.small-heading--bank-details {
+		padding: 0px;
+		margin: 0px;
+	}
+	&__row {
+		@media(min-width: $sm) {
+			display: flex;
+			align-items: center;
+		}
+	}
+}

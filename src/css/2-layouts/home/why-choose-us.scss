@@ -1,0 +1,64 @@
+.why-us {
+	
+	background-color: $white;
+	margin-top: -5px;
+
+	@media(min-width: $sm) {
+		margin-top: -80px;
+	}
+
+	@media(min-width: $lg) {
+		margin-top: -90px;
+	}
+
+	&__heading {
+
+		@media(min-width: $sm) {
+			padding-top: 90px;
+		}
+
+		@media(min-width: $lg) {
+			padding-top: 130px;
+		}
+	}
+
+	&__block {
+		text-align: center;
+		margin-top: 40px;
+		@media(min-width: $sm) {
+			margin-top: 45px;
+		}
+
+		@media(min-width: $lg) {
+			margin-top: 50px;
+		}
+	}
+
+	&__title {
+		margin: 25px 0 15px;
+		text-transform: capitalize;
+		font-weight: 600;
+
+		@media(min-width: $sm) {
+			margin: 15px 0px 10px;
+		}
+
+		@media(min-width: $lg) {
+			margin: 25px 0 15px;
+		}
+	}
+
+	&__info {
+		padding: 0 30px;
+		@media(min-width: $sm) {
+			line-height: 22px;
+			padding: 0;
+		}
+		@media(min-width: $md) {
+			line-height: 26px;
+		}
+	}
+	&__image {
+		height: 85px;
+	}
+}

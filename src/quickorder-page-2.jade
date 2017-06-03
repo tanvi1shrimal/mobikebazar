@@ -1,0 +1,642 @@
+doctype html
+
+- var page_name = "quickorder-page2"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - QuickOrder Page
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.after-login.no-overflow
+	//START: Header
+	include jade/header-before-login.jade
+
+	//START: Main
+	main
+		section.quickorder.section-quickorder-padding
+			.top-content
+				h1.page-header.page-header--quickorder Quick Order
+				.top-content__button.hidden-xs
+					button.button.button--primary-white.button--primary-red--border.button--md(type="button" data-toggle="modal" data-target="#addPartPopup") add part
+				.top-content__upload-links
+					ul.list-inline
+						li
+							a(data-toggle="modal" data-target="#uploadExcelSheetPopup")
+								i.mb-icon-upload-excel
+								span UPLOAD EXCEL SHEET
+						li
+							a(data-toggle="modal" data-target="#uploadImagesPopup")
+								i.mb-icon-upload-photo 
+								span.width55 UPLOAD IMAGE
+						li.help-icon.hidden-xs
+							a
+								i.mb-icon-help.mb-icon-help-sm.hidden-xs 
+								| need help?	
+
+			.container
+				.row
+					.col-sm-12
+						
+						.middle-content.middle-content--listblock
+							.listblock__header
+								h3.listblock__title List 1
+								span.listblock__createtime Created 5 minutes ago
+								a.listblock__iconDelete
+									i.mb-icon-delete
+							.listblock__table.listblock__table--nocontent
+								.listblock__tableWrapper
+									.listblock__thead.hidden-xs
+										.listblock__thead__row
+											.listblock__theadlist.listblock__theadlist--1
+												.listblock__theadlist--partNumber Part Number
+
+											.listblock__theadlist.listblock__theadlist--2
+												.listblock__theadlist--price Price
+
+											.listblock__theadlist.listblock__theadlist--3
+												.listblock__theadlist--partName Part Name
+
+											.listblock__theadlist.listblock__theadlist--4
+												.listblock__theadlist--brandModelVarient Brand, Model &amp; Variant
+
+											.listblock__theadlist.listblock__theadlist--5
+												.listblock__theadlist--quantity Quantity
+
+											.listblock__theadlist.listblock__theadlist--6
+												.listblock__theadlist--editDeleteOptions &nbsp;
+
+								a.button.button--primary-red.button--primary-red--border.add-list-customizebtn.button--md.hidden-xs(href="quickorder-page-3.html") Add List to cart
+								.middle-content__button.visible-xs
+									button.button.button--primary-white.button--primary-red--border.button--md(type="button" data-toggle="modal" data-target="#addPartPopup") add part
+
+	//START: Footer
+	include jade/footer-before-login.jade
+
+	//Upload Excelsheet Popup
+	#uploadExcelSheetPopup.modal.fade.modal--fullxs.quickorder-commonPopup(role='dialog')
+			.modal-dialog(role='document')
+				.modal-content
+					.modal-header
+						button.hidden-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+							i.mb-icon-close.modal__close-icon
+						button.visible-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+							i.mb-icon-left-arrow
+						h4.modal-title Upload Excel Sheet 
+					.modal-body
+						.uploading-wrap
+							.uploading-wrap__content.uploading-wrap__content--verticalalign
+								.uploading-wrap__img.visible-xs
+									//img(src="img/quickorder/nodata-icon.png", alt="No Data Image")
+									img(src="img/upload-excel.svg", alt="No Data Image")
+								p.uploading-wrap__nodata-text No sheet uploaded
+								.button.button--primary-white.uploadbtn.uploadbtn--sm.fileUpload.hidden-xs
+									span Choose sheet to upload
+									input.upload(type="file")
+								p.uploading-wrap__info.visible-xs For uploading parts in correct order
+								.uploading-wrap__sampleformat
+									p.pull-left.uploading-wrap__leftinfo.hidden-xs Correct excel sheet format
+									a.button.button--link.uploading-wrap__download-sheetLink Download sample excel sheet 
+									img.uploading-wrap__img.img-responsive.hidden-xs(src="img/quickorder/excelsheet-format.jpg", alt="Excel Sheet Format")
+
+					.modal-footer
+						.uploading-wrap__note.hidden-xs
+							p Please note:
+							ul.uploading-wrap__notelist.list-inline
+								li 
+									span Upload only .xls or .csv format
+								li
+									span Don’t attach images in excel sheet
+						.button.button--primary-red.button--primary-red--border.btn-block.uploadbtn.uploadbtn--xs.fileUpload.visible-xs
+							span Choose sheet to upload
+							input.upload(type="file")
+
+
+	//Upload Images Popup
+	#uploadImagesPopup.modal.fade.modal--fullxs.quickorder-commonPopup(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.hidden-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-close.modal__close-icon
+					button.visible-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-left-arrow
+					h4.modal-title Upload Images
+				.modal-body
+					.uploading-wrap
+						.uploading-wrap__content.uploading-wrap__content--verticalalign
+							.uploading-wrap__img.visible-xs
+								//img(src="img/quickorder/nodata-icon.png", alt="No Data Image")
+								img(src="img/upload-image.svg", alt="No Data Image")
+							p.uploading-wrap__nodata-text.visible-xs No images uploaded
+							.uploading-wrap__imageDragDrop.hidden-xs
+								.button.button--primary-white.uploadbtn.uploadbtn--sm.fileUpload
+									span Choose images to upload
+									input.upload(type="file")
+								p.uploading-wrap__orText OR
+								.uploading-wrap__dragdrop-zone
+									| Drag images here
+
+
+
+
+
+
+						p.hidden-xs.uploading-wrap__addText.text-center Add Brand, model, variant
+
+				.modal-footer
+					.uploading-wrap__note.hidden-xs
+						p Please note:
+						ul.uploading-wrap__notelist.list-inline
+							li
+								span Upload max 10 images 
+							li
+								span Image size can be upto 1MB
+							li
+								span Upload only jpeg and pdf’s
+					.button.button--primary-red.button--primary-red--border.btn-block.uploadbtn.uploadbtn--xs.fileUpload.visible-xs
+						span Choose images to upload
+						input.upload(type="file")
+
+		
+	//Upload Images Popup
+	#uploadImagesListingPopup.modal.fade.modal--fullxs.quickorder-commonPopup(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.hidden-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-close.modal__close-icon
+					button.visible-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-left-arrow
+					h4.modal-title.modal-title--leftalign Upload Images
+				.modal-body
+					.uploadImage-content
+						ul
+							li.uploadImage-content__liting-row
+								.row.uploadImage-content__row-xs
+									.col-sm-4.uploadImage-content__image
+										.form-group
+											.productImageParts
+												img.img-responsive(src="img/quickorder/uploadimage1.png" alt="Product Image")
+									.col-sm-8.uploadImage-content__desc
+										.form-group
+											label.form-group__label.hidden-xs Add Description
+											textarea.form-group__control.form-group__control--textarea1
+									.clearfix
+									.col-sm-4.uploadImage-content__brand
+										.form-group
+											label.form-group__label Brand
+											select.form-group__select.single-select2
+												option Bajaj
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__model
+										.form-group
+											label.form-group__label Model
+											select.form-group__select.single-select2
+												option FZ16
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__varient
+										.form-group
+											label.form-group__label Variant
+											select.form-group__select.single-select2
+												option 21 C
+												option TVS
+												option Yamaha
+												option Suzuki
+									.uploadImage-content__separator
+
+							li.uploadImage-content__liting-row
+								.row.uploadImage-content__row-xs
+									.col-sm-4.uploadImage-content__image
+										.form-group
+											.productImageParts
+												img.img-responsive(src="img/quickorder/uploadimage2.png" alt="Product Image")
+									.col-sm-8.uploadImage-content__desc
+										.form-group
+											label.form-group__label.hidden-xs Add Description
+											textarea.form-group__control.form-group__control--textarea1
+									.clearfix
+									.col-sm-4.uploadImage-content__brand
+										.form-group
+											label.form-group__label Brand
+											select.form-group__select.single-select2
+												option Bajaj
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__model
+										.form-group
+											label.form-group__label Model
+											select.form-group__select.single-select2
+												option FZ16
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__varient
+										.form-group
+											label.form-group__label Variant
+											select.form-group__select.single-select2
+												option 21 C
+												option TVS
+												option Yamaha
+												option Suzuki
+									.uploadImage-content__separator
+
+						.uploadImage-content__buttons
+							a.button.button--link(href='javasrcipt:void(0);') add more photos
+							a.button.button--primary-white.button--sm(href='#') upload
+							
+
+				.modal-footer
+					.uploading-wrap__note.hidden-xs
+						p Please note:
+						ul.uploading-wrap__notelist.list-inline
+							li
+								span Upload max 10 images 
+							li
+								span Image size can be upto 1MB
+							li
+								span Upload only jpeg and pdf’s
+
+
+	//Add Part Popup
+	#addPartPopup.modal.fade.modal--fullxs.quickorder-commonPopup.addPartPopup(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content.modal-content--height
+				.modal-header
+					button.hidden-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-close.modal__close-icon
+					button.visible-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-left-arrow
+					h4.modal-title.modal-title--leftalign Add Part
+				.modal-body
+					.addPart-content
+						.clearfix.addPart-content__row
+							.col-sm-9.addPart-content__positionRel
+								.form-group.ui-widget
+									label.form-group__label(for="inputSuccess1") Part Number
+									input.form-group__control.form-group__control--inputbox(type="text" id="inputSuccess1" aria-describedby="inputSuccess1Status")
+									span.has-available__feedback(aria-hidden="true")
+										span.mb-icon-right.has-available__icon-check 
+										span.has-available__availableText Available
+									span#inputSuccess1Status.sr-only (success)
+								p.addPart-content__hintText *Please enter the correct part number
+									
+							.col-sm-3.hidden-xs
+								.form-group
+									.help-icon
+										a
+											i.mb-icon-help
+											| need help?
+						.clearfix.addPart-content__row.addPart-content__row--spacebottom
+							.col-sm-4.addPart-content__brand
+								.form-group.form-group--nomargin
+									label.form-group__label Part Name
+									select.form-group__select.single-select2
+										option Bajaj
+										option TVS
+										option Yamaha
+										option Suzuki
+							.col-sm-4.addPart-content__model
+								.form-group.form-group--nomargin
+									label.form-group__label Quantity
+									select.form-group__select.select-quant
+										option 1
+										option 2
+										option 3
+										option 4
+							.col-sm-4.addPart-content__varient
+								.form-group.form-group--nomargin
+									span.input.input--hoshi
+										label.form-group__label Unit Price
+										input#unit-price.input__border(type='text')
+
+						.clearfix.addPart-content__row.addPart-content__row--OrSeparator
+							.col-sm-12
+								.form-group.addPart-content__separator
+									p.addPart-content__orText OR
+
+						.clearfix.addPart-content__row.addPart-content__row--spacebottom
+							.col-sm-4.addPart-content__brand
+								.form-group
+									label.form-group__label Brand
+									select.form-group__select.single-select2
+										option Bajaj
+										option TVS
+										option Yamaha
+										option Suzuki
+							.col-sm-4.addPart-content__model
+								.form-group
+									label.form-group__label Model
+									select.form-group__select.single-select2
+										option FZ16
+										option TVS
+										option Yamaha
+										option Suzuki
+							.col-sm-4.addPart-content__varient
+								.form-group
+									label.form-group__label Variant
+									select.form-group__select.single-select2
+										option 21 C
+										option TVS
+										option Yamaha
+										option Suzuki
+
+						.clearfix.addPart-content__row.addPart-content__row--spacebottom.addPart-content__row--category-vendorSection
+							.col-sm-4.addPart-content__chooseCategory.clearfix
+								.form-group
+									label.form-group__label Category &amp; Part Name 
+									a.addPart-content__chooseLinks(data-dismiss='modal' data-toggle="modal" data-target="#chooseCategoryPopup") Choose Category &amp; Select Part
+
+							.col-sm-8.addPart-content__vendor.clearfix
+								.form-group
+									label.form-group__label Vendor
+									select.form-group__select.single-select2
+										option Choose your vendor
+										option Vendor 1
+										option Vendor 2
+										option Vendor 3
+
+					.addPart-content__buttons.addPart-content__buttons--relative
+						p.addPart-content__noteText.hidden-xs Note : 15 % tax is applicable on all parts
+						a.button.button--link(href='javasrcipt:void(0);' data-dismiss='modal') Cancel
+						a.button.button--primary-white.button--sm(href='#') add to list
+
+
+	//Choose Category Popup
+	#chooseCategoryPopup.modal.fade.modal--fullxs.quickorder-commonPopup(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					button.hidden-xs.close.popup-back-button(type='button', data-toggle='modal' , data-target='#addPartPopup', data-dismiss='modal')
+						span Back
+					button.visible-xs.close(type='button', data-toggle='modal' , data-target='#addPartPopup', data-dismiss='modal')
+						i.mb-icon-left-arrow
+					h4.modal-title.modal-title--leftalign Choose Category
+				.modal-body
+					.chooseCategory-content
+						.clearfix.chooseCategory-content__row
+							.col-sm-12
+								.form-group
+									select.form-group__select.single-select2
+										option Please choose your category
+										option Oil Pump 
+										option Intake
+										option Carbuerettor 
+										option Clutch  
+										option Starter Clutch  
+										option Transmission 
+										option Oil Pump  
+										option Intake 
+										option Carbuerettor  
+										option Clutch  
+
+					.chooseCategory-content__buttons
+						a.button.button--primary-white.button--sm(data-toggle='modal' , data-target='#selectPartPopup', data-dismiss='modal') select
+	
+
+	//Select Part Popup
+	#selectPartPopup.modal.fade.modal--fullxs.quickorder-commonPopup(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content.modal-content--height
+				.modal-header
+					button.hidden-xs.close.popup-back-button(type='button', data-toggle='modal' , data-target='#chooseCategoryPopup', data-dismiss='modal')
+						span Back
+					button.visible-xs.close(type='button', data-toggle='modal' , data-target='#chooseCategoryPopup', data-dismiss='modal')
+						i.mb-icon-left-arrow
+					h4.modal-title.modal-title--leftalign Select Part
+				.modal-body
+					.selectPart-content
+						.clearfix.selectPart-content__row
+							.col-sm-12
+								.form-group
+									label.form-group__label.visible-xs Category
+									select.form-group__select.single-select2
+										option Crankshaft &amp; Piston
+										option Oil Pump 
+										option Intake
+										option Carbuerettor 
+										option Clutch  
+										option Starter Clutch  
+										option Transmission 
+										option Oil Pump  
+										option Intake 
+										option Carbuerettor  
+										option Clutch
+						.clearfix.selectPart-content__row
+							.col-sm-12
+								.category-listing
+									.row.flex-row
+										.col-sm-5.spare-illustrator
+											.spare-image-wrap
+												.spare-image
+													ul
+														li.points.points--1(data-point="number1")
+														li.points.points--2(data-point="number2")
+														li.points.points--3(data-point="number3")
+														li.points.points--4(data-point="number4")
+													img(src='img/model-img1.png').banner__image.img-responsive
+										.col-sm-7.spare-info-content
+											.spare-content
+												h1.page-header.visible-xs Showing 50 parts
+												.category-scrollbox
+													ul.spare-block
+														li.spare-block__item(data-list='number1')
+															.spare-info
+																.spare-counts 1
+																.spare-info-wrap.clearfix
+																	.spare-info__left
+																		p.spare-info__title 21C-E1400-00
+																		span.spare-info__subtitle Crankshaft Assembly
+																		.spare-info__labels
+																			ul
+																				li.label.label-default Cilinder
+																				li.label.label-default Silintar
+																				li.label.label-default Tanki
+																				
+																	.spare-info__right
+																		p.spare-info__price Rs. 4,300
+																		.select-dropdown
+																			select.form-control.form-group__select.single-quant
+																				option 01
+																				option 02
+																.spare-info__buttons
+																	button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																		i.mb-icon-plus
+																		span add
+
+														li.spare-block__item(data-list='number2')
+															.spare-info
+																.spare-counts 2
+																.spare-info-wrap.clearfix
+																	.spare-info__left
+																		p.spare-info__title 21C-E1549-00
+																		span.spare-info__subtitle Sprocket, Cam Chain
+																		.spare-info__labels
+																			ul
+																				li.label.label-default Cilinder
+																				li.label.label-default Silintar
+																				li.label.label-default Tanki
+																	.spare-info__right
+																		p.spare-info__price Rs. 2,300
+																		.select-dropdown
+																			select.form-control.form-group__select.single-quant
+																				option 01
+																				option 02
+																.spare-info__buttons
+																	button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																		i.mb-icon-plus
+																		span add
+
+														li.spare-block__item(data-list='number3')
+															.spare-info
+																.spare-counts 3
+																.spare-info-wrap.clearfix
+																	.spare-info__left
+																		p.spare-info__title 21C-E1400-00
+																		span.spare-info__subtitle Crankshaft Assembly
+																		.spare-info__labels
+																			ul
+																				li.label.label-default Cilinder
+																				li.label.label-default Silintar
+																				li.label.label-default Tanki
+																				
+																	.spare-info__right
+																		p.spare-info__price Rs. 4,300
+																		.select-dropdown
+																			select.form-control.form-group__select.single-quant
+																				option 01
+																				option 02
+																.spare-info__buttons
+																	button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																		i.mb-icon-plus
+																		span add
+
+														li.spare-block__item(data-list='number4')
+															.spare-info
+																.spare-counts 4
+																.spare-info-wrap.clearfix
+																	.spare-info__left
+																		p.spare-info__title 21C-E1549-00
+																		span.spare-info__subtitle Sprocket, Cam Chain
+																		.spare-info__labels
+																			ul
+																				li.label.label-default Cilinder
+																				li.label.label-default Silintar
+																				li.label.label-default Tanki
+																	.spare-info__right
+																		p.spare-info__price Rs. 2,300
+																		.select-dropdown
+																			select.form-control.form-group__select.single-quant
+																				option 01
+																				option 02
+																.spare-info__buttons
+																	button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																		i.mb-icon-plus
+																		span add
+
+					.selectPart-content__buttons.selectPart-content__buttons--relative
+						a.button.button--primary-white.button--sm(data-toggle='modal' , data-target='#addPartFinalPopup', data-dismiss='modal') done
+
+
+	//Add Part Final Popup
+	#addPartFinalPopup.modal.fade.modal--fullxs.quickorder-commonPopup.addPartPopup(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content.modal-content--height
+				.modal-header
+					button.hidden-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-close.modal__close-icon
+					button.visible-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-left-arrow
+					h4.modal-title.modal-title--leftalign Add Part
+				.modal-body
+					.addPart-content
+						.clearfix.addPart-content__row
+							.col-sm-9.addPart-content__positionRel
+								.form-group.has-available
+									label.form-group__label(for="inputSuccess1") Part Number
+									input.form-group__control.form-group__control--inputbox(type="text" id="inputSuccess1" aria-describedby="inputSuccess1Status" value="21CE140000")
+									span.has-available__feedback(aria-hidden="true")
+										span.mb-icon-right.has-available__icon-check 
+										span.has-available__availableText Available
+									span#inputSuccess1Status.sr-only (success)
+								p.addPart-content__hintText *Please enter the correct part number
+									
+							.col-sm-3.hidden-xs
+								.form-group
+									.help-icon
+										a
+											i.mb-icon-help
+											| need help?
+
+						.clearfix.addPart-content__row.addPart-content__row--OrSeparator
+							.col-sm-12
+								.form-group.addPart-content__separator
+									p.addPart-content__orText OR
+
+						.clearfix.addPart-content__row.addPart-content__row--spacebottom
+							.col-sm-4.addPart-content__brand
+								.form-group
+									label.form-group__label Brand
+									select.form-group__select.single-select2
+										option Yamaha
+							.col-sm-4.addPart-content__model
+								.form-group
+									label.form-group__label Model
+									select.form-group__select.single-select2
+										option FZ16
+							.col-sm-4.addPart-content__varient
+								.form-group
+									label.form-group__label Variant
+									select.form-group__select.single-select2
+										option 21 C
+
+						.clearfix.addPart-content__row.addPart-content__row--spacebottom.addPart-content__row--category-vendorSection
+							.col-sm-8.addPart-content__chooseCategory.clearfix
+								.form-group
+									label.form-group__label Category
+									select.form-group__select.single-select2
+										option CrankshaH &amp; Piston
+
+							.col-sm-4.addPart-content__vendor.clearfix
+								.form-group
+									label.form-group__label Vendor
+									select.form-group__select.single-select2
+										option Susheela Motors
+
+						.clearfix.addPart-content__row.addPart-content__row--spacebottom.addPart-content__row--totalSelectedPartsSection
+							.col-sm-12.addPart-content__partsAdded.clearfix
+								.form-group
+									p.addPart-content__partsAddedText Total 
+										span 10 parts 
+										| added in this category
+
+					.addPart-content__buttons.addPart-content__buttons--relative
+						p.addPart-content__noteText.hidden-xs Note : 15 % tax is applicable on all parts
+						a.button.button--link(href='javasrcipt:void(0);' data-dismiss='modal') Cancel
+						a.button.button--primary-white.button--sm(href='quickorder-page-3.html') add to list
+	
+	include jade/user-login-modal.jade
+
+	//START: Signup Modal- User
+	include jade/user-signup-modal.jade
+	//START: Login Modal - Quickorder
+	include jade/quickOrder-login-modal.jade
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+
+	include jade/scripts.jade
+	+script(page_name)
+
+
+
+
+
+

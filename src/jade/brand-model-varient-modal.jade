@@ -1,0 +1,391 @@
+#popup-BrandModelVarientOnly.modal.modal--fullxs.fade(role='dialog', tabindex="-1")
+	.modal-dialog.modal__dialog
+			.modal-content.modal-content--height
+				.modal-header.modal--header
+					button(type='button' data-dismiss='modal').close.close--closebike
+						i.mb-icon-close.modal__close-icon
+				.modal-body.modal__body
+					
+					//START: Wizard Steps 
+					form#msform.bike-stepwizard
+						ul#progressbar.bike-stepwizard__row.setup-panel
+							li.bike-stepwizard__step.bike-stepwizard__step--first.current-step(data-step-name="step-1")
+								a(href='#step-1' aria-controls="step-1" role="tab" data-toggle="tab").bike-stepwizard__link.active
+									i.mb-icon-right
+								p.bike-stepwizard__option.active brand
+
+							li.bike-stepwizard__step(data-step-name="step-2")
+								a(href='#step-2' aria-controls="step-2" role="tab" data-toggle="tab").bike-stepwizard__link 
+									i.mb-icon-right
+								p.bike-stepwizard__option model
+
+							li.bike-stepwizard__step(data-step-name="step-3")
+								a(href='#step-3' aria-controls="step-3" role="tab" data-toggle="tab").bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option variant
+							li.bike-stepwizard__step(data-step-name="step-4")
+								a(href='#step-4' aria-controls="step-4" role="tab" data-toggle="tab").bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option Category
+							li.bike-stepwizard__step(data-step-name="step-5")
+								a(href='#step-5' aria-controls="step-5" role="tab" data-toggle="tab").bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option Parts
+
+					//START: Wizard Content
+
+					.tab-content.clearfix
+						#step-1.setup-content.tabpanel.tab-pane.active
+							h3.bike-brand__title.text-center Select your Brand
+							.bike-scrollbox.bike-scrollbox--noscrollbar.clearfix
+								.bike-brand__wrap.clearfix
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/bajaj.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/tvs.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/yamaha.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/suzuki.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/royal-enfield-logo.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__other-brands.bike-brand__link
+											//img(src='img/bike-brands/tvs.png').bike-brand__image
+											| Other brands
+											//.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+								.bike-brand__wrap.bike-brand__wrap--other-brands.clearfix
+									.divider.divider--horizontal
+									h3.bike-brand__title.text-center.bike-brand__title--other-brands Other brands
+									.bike-brand-otherbrands
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/bajaj.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/tvs.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/yamaha.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/suzuki.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/yamaha.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/suzuki.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/suzuki.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/yamaha.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+										.col-sm-4.col-xs-6.bike-brand__block
+											a(href='#').bike-brand__link.bike-next
+												img(src='img/bike-brands/suzuki.png').bike-brand__image
+												.bike-brand__overlay
+													svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+														circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+														path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+						#step-2.setup-content.tabpanel.tab-pane
+							h3.bike-brand__title.text-center Select your Model
+							.bike-scrollbox.clearfix
+								.bike-container.bike-brand__wrap.clearfix.col-sm-10.col-sm-offset-1
+									.col-sm-6.bike-brand__model
+										a(href='#').bike-brand__bike-link.bike-next-2
+											img(src='img/bike-brands/thunder-bird.png').bike-brand__bike-image.img-responsive
+											h3.bike-brand__bike-title Thunderbird 350
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-6.bike-brand__model
+										a(href='#').bike-brand__bike-link.bike-next-2
+											img(src='img/bike-brands/royal-enfield-1.png').bike-brand__bike-image.img-responsive
+											h3.bike-brand__bike-title Himalayan
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-6.bike-brand__model
+										a(href='#').bike-brand__bike-link.bike-next-2
+											img(src='img/bike-brands/thunder-bird.png').bike-brand__bike-image.img-responsive
+											h3.bike-brand__bike-title Thunderbird 35
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+						#step-3.setup-content.tabpanel.tab-pane
+							h3.bike-brand__title.text-center You’ve selected 
+								span Himalayan
+							.bike-scrollbox.clearfix
+								.col-sm-6.col-sm-offset-3
+									a(href='#').bike-brand__bike-link.bike-submit.bike-next-3
+										img(src='img/bike-brands/royal-enfield.png').img-responsive.bike-brand__bike-image
+										.bike-brand__overlay
+											svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+												circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+												path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+						#step-4.setup-content.tabpanel.tab-pane
+							.bike-scrollbox.clearfix
+								ul.category-block.col-sm-10.col-sm-offset-1
+									li.col-sm-6.category-block__item.bike-brand__model
+										a(href='#').bike-next-4.category-info.text-center
+											img.category-info__image.img-responsive(src='img/category-img1.png' alt='Category')
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+											p.category-info__title Cylinder
+											span.category-info__subtitle 29 parts in this category
+											p.category-info__price Rs. 10,500
+
+									li.col-sm-6.category-block__item.bike-brand__model
+										a(href='#').bike-next-4.category-info.text-center
+											img.category-info__image.img-responsive(src='img/category-img1.png' alt='Category')
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+											p.category-info__title Steering Handle &amp; Cable
+											span.category-info__subtitle 13 parts in this category
+											p.category-info__price Rs. 6,500
+
+						#step-5.setup-content.tabpanel.tab-pane
+							.bike-scrollbox.clearfix
+								.selectPart-content
+									.clearfix.selectPart-content__row
+										.col-sm-12
+											.form-group
+												label.form-group__label.visible-xs Category
+												select.form-group__select.single-select2
+													option Crankshaft &amp; Piston
+													option Oil Pump 
+													option Intake
+													option Carbuerettor 
+													option Clutch  
+													option Starter Clutch  
+													option Transmission 
+													option Oil Pump  
+													option Intake 
+													option Carbuerettor  
+													option Clutch
+									.clearfix.selectPart-content__row
+										
+										.category-listing
+												.flex-row
+													.col-sm-5.spare-illustrator
+														.spare-image-wrap
+															.spare-image
+																ul
+																	li.points.points--1(data-point="number1")
+																	li.points.points--2(data-point="number2")
+																	li.points.points--3(data-point="number3")
+																	li.points.points--4(data-point="number4")
+																img(src='img/model-img1.png').banner__image.img-responsive
+													.col-sm-7.spare-info-content
+														.spare-content#selectPartPopup
+															h1.page-header.visible-xs Showing 50 parts
+															.category-scrollbox
+																ul.spare-block
+																	li.spare-block__item(data-list='number1')
+																		.spare-info
+																			.spare-counts 1
+																			.spare-info-wrap.clearfix
+																				.spare-info__left
+																					p.spare-info__title 21C-E1400-00
+																					span.spare-info__subtitle Crankshaft Assembly
+																					.spare-info__labels
+																						ul
+																							li.label.label-default Cilinder
+																							li.label.label-default Silintar
+																							li.label.label-default Tanki
+																							
+																				.spare-info__right
+																					p.spare-info__price Rs. 4,300
+																					.select-dropdown
+																						select.form-control.form-group__select.single-quant
+																							option 01
+																							option 02
+																			.seller-info
+																				p.product-seller__by
+																					| Sold by
+																					a(href="#").product-seller__link Susheela motors
+
+																				p.seller-info__desp
+																					| View 
+																					a(href="javascript:void(0)").seller-info__link 2 sellers
+																					| selling the same product starting from Rs. 4,290
+
+																				.other-sellers.clearfix
+																					.close-icon-cont.clearfix
+																						i.mb-icon-close
+																					.other-sellers__item.clearfix.first
+																						.clearfix
+																							.pull-left
+																								a(href="#").product-seller__link Susheela motors
+																							.pull-right
+																								p.spare-info__price Rs. 4,300
+																								del.spare-info__price.spare-info__price--striked Rs. 5,300
+																								span.spare-info__discount 10%
+																								.select-dropdown
+																									select.form-control.form-group__select.single-quant
+																										option 01
+																										option 02
+																						.buttons-container
+																							a(href="#").button.button--primary-white.button--xs add to cart
+																							a(href="#").button.button--link.button--underline.button--xs add to wishlist
+																					.other-sellers__item.clearfix
+																						.clearfix
+																							.pull-left
+																								a(href="seller-review.html").product-seller__link Susheela motors
+																							.pull-right
+																								p.spare-info__price Rs. 4,300
+																								del.spare-info__price.spare-info__price--striked Rs. 5,300
+																								span.spare-info__discount 15%
+																								.select-dropdown
+																									select.form-control.form-group__select.single-quant
+																										option 01
+																										option 02
+																						.buttons-container
+																								a(href="#").button.button--primary-white.button--xs add to cart
+																								a(href="#").button.button--link.button--underline.button--xs add to wishlist
+
+																			.spare-info__buttons
+																				button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																					i.mb-icon-plus
+																					span add
+
+																	li.spare-block__item(data-list='number2')
+																		.spare-info
+																			.spare-counts 2
+																			.spare-info-wrap.clearfix
+																				.spare-info__left
+																					p.spare-info__title 21C-E1549-00
+																					span.spare-info__subtitle Sprocket, Cam Chain
+																					.spare-info__labels
+																						ul
+																							li.label.label-default Cilinder
+																							li.label.label-default Silintar
+																							li.label.label-default Tanki
+																				.spare-info__right
+																					p.spare-info__price Rs. 2,300
+																					.select-dropdown
+																						select.form-control.form-group__select.single-quant
+																							option 01
+																							option 02
+																			.spare-info__buttons
+																				button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																					i.mb-icon-plus
+																					span add
+
+																	li.spare-block__item(data-list='number3')
+																		.spare-info
+																			.spare-counts 3
+																			.spare-info-wrap.clearfix
+																				.spare-info__left
+																					p.spare-info__title 21C-E1400-00
+																					span.spare-info__subtitle Crankshaft Assembly
+																					.spare-info__labels
+																						ul
+																							li.label.label-default Cilinder
+																							li.label.label-default Silintar
+																							li.label.label-default Tanki
+																							
+																				.spare-info__right
+																					p.spare-info__price Rs. 4,300
+																					.select-dropdown
+																						select.form-control.form-group__select.single-quant
+																							option 01
+																							option 02
+																			.spare-info__buttons
+																				button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																					i.mb-icon-plus
+																					span add
+
+																	li.spare-block__item(data-list='number4')
+																		.spare-info
+																			.spare-counts 4
+																			.spare-info-wrap.clearfix
+																				.spare-info__left
+																					p.spare-info__title 21C-E1549-00
+																					span.spare-info__subtitle Sprocket, Cam Chain
+																					.spare-info__labels
+																						ul
+																							li.label.label-default Cilinder
+																							li.label.label-default Silintar
+																							li.label.label-default Tanki
+																				.spare-info__right
+																					p.spare-info__price Rs. 2,300
+																					.select-dropdown
+																						select.form-control.form-group__select.single-quant
+																							option 01
+																							option 02
+																			.spare-info__buttons
+																				button.button.button--primary-white.button--sm(data-button="toggle" data-alt="added") 
+																					i.mb-icon-plus
+																					span add
+								.selectPart-content__buttons.selectPart-content__buttons--relative
+									a.button.button--primary-white.button--sm.snaker-btn(data-toggle='modal' , data-target='#addPartFinalPopup', data-dismiss='modal') done

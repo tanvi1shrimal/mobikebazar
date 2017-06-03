@@ -1,0 +1,545 @@
+mixin script(page_name)
+
+    //- script.
+    //-         function lazyLoadFonts(){
+    //-             var fonts = document.createElement('link');
+    //-             fonts.rel= "stylesheet";
+    //-             fonts.href = "css/fonts.css";
+    //-             document.querySelector('head').appendChild(fonts);
+    //-         }
+            
+    //-         function loadAssetsAtLoad(){
+    //-             lazyLoadFonts();
+    //-         }
+    //-         if (window.addEventListener){
+    //-         window.addEventListener("load", loadAssetsAtLoad);
+    //-         }
+    //-         else if (window.attachEvent){
+    //-         window.attachEvent("onload", loadAssetsAtLoad);
+    //-         }
+    //-         else window.onload = loadAssetsAtLoad;
+
+    if(page_name == "home")
+
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/jquery-ui.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/slick.js")
+        script(src="js/plugins/aos.js")
+        script(src="js/plugins/vivus.min.js")
+
+        script(src="js/plugins/classie.js")
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        //- script(src="js/plugins/TweenMax.min.js")
+        script(src="js/plugins/validator.min.js")
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+       
+        script(src="js/magic-line.js")
+        script(src="js/vivus-init.js")
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/step-wizard.js")
+        script(src="js/accessories-slider.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/dotAnimation.js")
+        script(src="js/bike-register-modal-pop.js")
+        script(src="js/perfect-scrollbar-init.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/mobile-menu-toggle.js")
+        //- script(src="js/svgEngineAnims.js")
+        script(src="js/toggleAction.js")
+        script(src="js/categoryPartsChanges.js")
+        script(src="js/aos-init.js")
+        script(src="js/toggle-sellers.js")
+        script(src="js/product-autocomplete.js")
+        script(src="js/select2-init.js")
+        script(src="js/snackbarToggle.js")
+
+
+
+    if(page_name == "buyer-registration")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+
+        script(src="js/plugins/classie.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/validator.min.js")
+        script(src="js/plugins/TweenMax.min.js")
+
+        //START: Custom Scripts
+        script(src="js/select2-init.js")
+        script(src="js/svgEngineAnims.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+
+    if(page_name == "all-reviews")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+
+        script(src="js/plugins/classie.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/validator.min.js")
+
+        //START: Custom Scripts
+        script(src="js/select2-init.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+
+     if(page_name == "category-listing")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src='js/plugins/jquery-1.7.js')
+        script(src="js/plugins/underscore.js")
+        script(src="js/plugins/pinchzoom.js")
+        script(src="js/pinchzoom-init.js")
+        script(src="js/plugins/classie.js")
+        script(src="js/plugins/finezoom.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/fineZoom-init.js")
+        script(src="js/select2-init.js")
+        script(src="js/categoryPartsChanges.js")
+        script(src="js/categoryScrollerHeight.js")
+        script(src="js/perfect-scrollbar-init.js")
+        script(src="js/toggle-sellers.js")
+
+    if(page_name == "category")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/validator.min.js")
+
+        //START: Custom Scripts
+        script(src="js/searchPopup.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/filter-options.js")
+        
+
+
+    if(page_name == "my-account")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/validator.min.js")
+
+
+        //START: Custom Scripts
+        script(src="js/text-input-effects.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/recoverPasswordScreen.js")
+
+    if(page_name == "review")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/validator.min.js")
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/text-input-effects.js")
+
+    if(page_name == "my-address")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/validator.min.js")
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/nav-dropdown.js")
+        script(src="js/select2-init.js")
+        script(src="js/searchPopup.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+        
+
+     if(page_name == "my-cart")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/select2-init.js")
+        script(src="js/toggle-sellers.js")
+
+    if(page_name == "my-delivery-address")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/plugins/classie.js")
+        script(src="js/select2-init.js")
+        script(src="js/text-input-effects.js")
+
+    if(page_name == "my-orders")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/select2-init.js")
+        script(src="js/order-tabs-scroll.js")
+
+
+    if(page_name == "need-help")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/text-input-effects.js")
+
+
+    if(page_name == "my-profile")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/moment.js")
+        script(src="js/plugins/date-picker.js")
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/date-picker-init.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+
+    if(page_name == "my-profile")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/moment.js")
+        script(src="js/plugins/date-picker.js")
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/date-picker-init.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+    
+    if(page_name == "my-wishlist")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/moment.js")
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/select2-init.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+
+
+    if(page_name == "my-cashback")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+
+    if(page_name == "order-details")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+
+        //START: Custom Scripts
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/searchPopup.js")
+        script(src="js/select2-init.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/order-tabs-scroll.js")
+
+    if(page_name == "payment")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+        script(src="js/plugins/moment.js")
+        script(src="js/plugins/date-picker.js")
+
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/select2-init.js")
+        script(src="js/date-picker-init.js")
+        script(src="js/paymentOptions.js")
+        script(src="js/paymentOptionsToggle.js")
+
+    if(page_name == "category-listings")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src='js/plugins/jquery-1.7.js')
+        script(src="js/plugins/underscore.js")
+        script(src="js/plugins/pinchzoom.js")
+        script(src="js/pinchzoom-init.js")
+        script(src="js/plugins/jquery-ui.js")
+        script(src="js/plugins/moment.js")
+        script(src="js/plugins/classie.js")
+        script(src="js/plugins/date-picker.js")
+        script(src="js/plugins/finezoom.js")
+        script(src="js/plugins/jquery.easing.min.js")
+        script(src="js/plugins/lightbox.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/slick.js")
+        script(src="js/plugins/aos.js")
+        script(src="js/plugins/smartWizard.js")
+        script(src="js/plugins/stepper-material.js")
+        script(src="js/plugins/stepper.min.js")
+        script(src="js/plugins/TweenMax.min.js")
+        script(src="js/plugins/validator.min.js")
+        script(src="js/plugins/vivus.min.js")
+
+        //START: Custom Scripts
+        //- script(src="js/main.js")
+        script(src="js/accessories-slider.js")
+        script(src="js/bike-register-modal-pop.js")
+        script(src="js/date-picker-init.js")
+        script(src="js/floating-label.js")
+        script(src="js/aos-init.js")
+        script(src="js/magic-line.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/step-process.js")
+        script(src="js/step-wizard.js")
+        script(src="js/stepper.js")
+        script(src="js/vivus-init.js")
+
+    if(page_name == "quickorder-page")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+
+        //START: Custom Scripts
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/modelOpenLargerScreen.js")
+
+    if(page_name == "quickorder-page2")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/jquery-ui.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/select2-init.js")
+        script(src="js/inputBoxAvailability.js")
+        script(src="js/categoryPartsChanges.js")
+        script(src="js/categoryScrollerHeight.js")
+        script(src="js/perfect-scrollbar-init.js")
+        script(src="js/toggleAction.js")
+        script(src="js/modelOpenLargerScreen.js")
+        script(src="js/autocomplete.js")
+
+    if(page_name == "quickorder-page3")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/perfect-scrollbar.jquery.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/jquery.easing.min.js")
+        script(src="js/plugins/lightbox.js")
+
+        //START: Custom Scripts
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/select2-init.js")
+        script(src="js/inputBoxAvailability.js")
+        script(src="js/categoryPartsChanges.js")
+        script(src="js/categoryScrollerHeight.js")
+        script(src="js/perfect-scrollbar-init.js")
+        script(src="js/toggleAction.js")
+        script(src="js/modelOpenLargerScreen.js")
+
+    if(page_name == "signup")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/vivus.min.js")
+        script(src="js/plugins/TweenMax.min.js")
+        script(src="js/plugins/validator.min.js")
+        script(src="js/plugins/classie.js")
+
+
+        //START: Custom Scripts
+        script(src="js/vivus-init.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/svgEngineAnims.js")
+        script(src="js/recoverPasswordScreen.js")
+
+    if(page_name == "registration")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/vivus.min.js")
+        script(src="js/plugins/TweenMax.min.js")
+        script(src="js/plugins/validator.min.js")
+        script(src="js/plugins/select2.min.js")
+        script(src="js/plugins/smartWizard.js")
+        script(src="js/plugins/stepper-material.js")
+        script(src="js/plugins/stepper.min.js")
+
+        //START: Custom Scripts
+        script(src="js/vivus-init.js")
+        script(src="js/svgEngineAnims.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/select2-init.js")   
+        script(src="js/registerButton.js")    
+        script(src="js/step-process.js")     
+        script(src="js/step-wizard.js")     
+        script(src="js/stepper.js")  
+
+    if(page_name == "track-order")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+
+        //START: Custom Scripts
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/step-wizard.js")
+        script(src="js/bike-register-modal-pop.js")
+
+    if(page_name == "return-order")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+
+        //START: Custom Scripts
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/step-wizard.js")
+        script(src="js/bike-register-modal-pop.js")
+
+    if(page_name == "return-order-1")
+        //START: Plugin Scripts
+        script(src="js/plugins/jquery.js")
+        script(src="js/plugins/bootstrap.min.js")
+        script(src="js/plugins/classie.js")
+
+        script(src="js/plugins/select2.min.js")
+
+        //START: Custom Scripts
+        script(src="js/select2-init.js") 
+        script(src="js/recoverPasswordScreen.js")
+        script(src="js/text-input-effects.js")
+        script(src="js/searchPopup.js")
+        script(src="js/nav-dropdown.js")
+        script(src="js/mobile-menu-toggle.js")
+        script(src="js/step-wizard.js")
+        script(src="js/bike-register-modal-pop.js")
+
+

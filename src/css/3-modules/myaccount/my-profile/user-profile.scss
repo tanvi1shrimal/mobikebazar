@@ -1,0 +1,196 @@
+.profile-list {
+
+	position: absolute;
+	right: 0px;
+	bottom: 80px;
+
+	@media(min-width: $sm) {
+		bottom: 25px;
+	}
+
+	&--gender {
+		height: 60px;
+		display: flex;
+		align-items: flex-end;
+		.form-group {
+			
+			@media(min-width: $sm) {
+				margin-bottom: 10px;
+			}
+			@media(min-width: $md) {
+				margin-bottom: 15px;
+			}
+			.input__label--gender {
+				font-family: $OpenSans-Semibold;
+				font-size: 12px;
+				color: $black333;
+				margin-bottom: 15px;
+
+				@media(min-width: $sm) {
+					display: block;
+
+				}
+
+				@media(min-width: $md) {
+					font-size: 14px;
+				}
+				@media(min-width: $lg){
+					margin-bottom: 5px;
+					display: inline-block;
+				}
+			}
+
+			.control--radio {
+				font-size: 13px;
+				&:first-child {
+					margin-right: 0px;
+				}
+				
+				@media(min-width: $sm) {
+					font-size: 12px;
+					padding-left: 20px;
+					margin-bottom: 0px;
+					margin-right: 23px;
+					margin-left: 5px;
+					
+				}
+				@media(min-width: $md) {
+					font-size: 14px;
+					margin-right: 30px;
+					&:last-child {
+						margin-left: 0px;
+					}
+					
+				}
+				@media(min-width: $lg) {
+					padding-left: 25px;
+					margin-left: 25px;
+
+				}
+
+				.control__indicator {
+					@media(min-width: $sm) {
+						left: -5px;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+
+.save-cancel-btns {
+	margin: 20px 0px 35px;
+	@media(min-width: $sm) {
+		margin-top: 15px;
+	}
+	@media(min-width: $md) {
+		margin-top: 35px;
+	}
+	button {
+		width: 50%;
+
+		@media(min-width: $sm) {
+			width: auto;
+		}
+	}
+}
+
+.change-password {
+	position: absolute;
+	bottom: 30px;
+	right: 0px;
+	z-index: 3;
+
+	&__btn {
+		background: transparent;
+		border: 0;
+		color: $redef0000;
+		font-size: 12px;
+		font-family: $OpenSans-Semibold;
+		text-transform: capitalize;
+	}
+}
+
+
+.save-btn {
+		padding: 6px 49px;
+		font-size: 13px;
+
+		@media(min-width: $sm) {
+			padding: 9px 19px;
+			font-size: 12px;
+		}
+
+		@media(min-width: $md) {
+			padding: 10px 49px;
+			font-size: 13px;
+		}
+}
+.cancel-btn {
+	color: $black666;
+	background: transparent;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: $Raleway-SemiBold;
+	border: 0px;
+
+	@media(min-width: $sm) {
+		margin-left: 40px;
+	}
+
+	@media(min-width: $md) {
+		font-size: 13px;
+		margin-left: 50px;
+
+	}
+}
+
+
+// Date picker customization
+
+.dtp-btn-cancel {
+	display: none;
+}
+
+.dtp-btn-ok {
+	background: #ec1a1f;;
+	color: #fff;
+	border-radius: 0;
+	font-family: $OpenSans-Semibold;
+
+	&:hover,
+	&:focus,
+	&:active,
+	&:visited {
+		color: #fff;
+		outline: none;
+	}
+
+
+}
+
+.dtp>.dtp-content>.dtp-date-view>header.dtp-header {
+	background: #de1318;
+	padding: 0.8em;
+}
+.dtp div.dtp-date, .dtp div.dtp-time{
+	
+	background: #ea0006;
+	font-family: "OpenSans-Regular";
+}
+.dtp table.dtp-picker-days tr>td>a.selected {
+	background: #ec1a1f;
+}
+.year-picker-item.active {
+	color: #ea0006;
+}
+
+.dtp .p10>a,
+.dtp .dtp-close>a {
+	color: #ffb0b0;
+}
+.dtp-actual-day {
+	font-family: $OpenSans-Regular;
+}

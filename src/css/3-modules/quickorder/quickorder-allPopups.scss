@@ -1,0 +1,145 @@
+.quickorder-commonPopup {
+	&.modal {
+		.modal-dialog {
+			@media(min-width: $sm) {
+				width: 720px;
+			}
+			@media(min-width: $lg) {
+				width: 860px;
+			}
+			.modal-content {
+				@media(max-width: $xs-max) {
+					background-color: $whitef3f3f3;
+				}
+				.modal-header {
+					@media(max-width: $xs-max) {
+						background-color: $white;
+					}
+					.modal-title {
+						@media(max-width: $xs-max) {
+							font-family: $OpenSans-Semibold;
+						    font-size: 14px;
+						    line-height: 24px;
+						    color: $red;
+						    text-transform: uppercase;
+						    text-align: left;
+						    margin: 0 0 0 40px;
+						}
+						&--leftalign {
+							@media(min-width: $sm) {
+								text-align: left;
+								padding: 0 15px;
+							}
+						}
+					}
+					.close {
+						@media(max-width: $xs-max) {
+							top: 12px;
+							font-size: 20px;
+							width: 30px;
+    						height: 30px;
+						}
+					}
+					.popup-back-button {
+						right: 30px;
+    					display: block;
+    					@media(min-width: $sm) {
+    						top: 33px;
+    					}
+    					@media(min-width: $sm) {
+    						top: 30px;
+    					}
+						span {
+							@media(min-width: $sm) {
+								display: block;
+								font-family: $Raleway-Medium;
+								font-size:14px;
+								color: $red; 
+								padding-left: 20px;
+								position: relative;
+								&::before {
+									content: '';
+									width: 11px;
+								    height: 15px;
+									position: absolute;
+									left: 0;
+    								top: 0;
+									background: url('../img/quickorder/back-button.png') no-repeat scroll 0 0;
+
+								}
+							}
+						}
+					}
+				}
+				.modal-body {
+					@media(max-width: $xs-max) {
+						padding: 0;
+					}
+				}
+				.modal-footer {
+					// border-top: 0;
+					@media(max-width: $xs-max) {
+						padding: 0;
+						position: fixed;
+						bottom: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// CSS for file upload
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    input.upload {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    font-size: 20px;
+	    cursor: pointer;
+	    opacity: 0;
+	    filter: alpha(opacity=0);
+	}
+}
+.uploadbtn {
+	font-family: $Raleway-Bold;
+	font-size: 12px;
+	line-height: 44px;
+	height: 44px;
+	text-align: center;
+	&--xs {
+		border:0;
+		&:hover, &:focus, &:before {
+			background-color: $red;
+			color:$white;
+		}
+	}
+	&--sm {
+		&:hover, &:focus, &:before {
+			background-color: $white;
+			color: $red;
+		}
+	}
+
+	@media(min-width: $sm) {
+		margin: 0 auto 30px;
+		height: auto;
+		font-size: 16px;
+		line-height: normal;
+		width: 270px;
+		display: flex;
+		padding: 19px 20px;
+	    justify-content: center;
+	    align-items: center;
+	}
+}
+
+
+
+
+

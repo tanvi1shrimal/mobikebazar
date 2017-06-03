@@ -1,0 +1,213 @@
+doctype html
+
+- var page_name = "category-listing"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Category Listing
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+	
+
+body
+	//START: Header
+	include jade/header-before-login.jade
+		
+	//START: Main
+	main
+	
+		//START: Breadcrumb
+		ol.breadcrumb
+			li
+				a(href='#') YAMAHA FZ 16
+			li
+				a(href='#') 21C1
+			li.active Cylinder (1E0)
+
+		section.category-listing
+			.container
+				.row.flex-row
+					.col-sm-5.spare-illustrator
+						.spare-image-wrap
+							.spare-image.zoom_image#zoom_image
+								ul
+									li.points.points--1(data-point='number1')
+									li.points.points--2(data-point='number2')
+									li.points.points--3(data-point='number3')
+									li.points.points--4(data-point='number4')
+								img(src='img/model-img1.png').banner__image
+								
+					.col-sm-7.spare-info-content
+						.spare-content
+							h1.page-header Showing 50 parts
+							.category-scrollbox
+								ul.spare-block
+									li.spare-block__item(data-list='number1')
+										.spare-info
+											.spare-counts 1
+											.spare-info-wrap.clearfix
+												.clearfix
+													.spare-info__left
+														p.spare-info__title 21C-E1400-00
+														p.spare-info__title.spare-info__title--small 21C-E1400-20
+														span.spare-info__subtitle Crankshaft Assembly
+														.spare-info__labels
+															ul
+																li.label.label-default Cilinder
+																li.label.label-default Silintar
+																li.label.label-default Tanki
+														
+													.spare-info__right
+														p.spare-info__price Rs. 4,300
+														del.spare-info__price.spare-info__price--striked Rs. 5,300
+														span.spare-info__discount 10%
+														.select-dropdown
+															select.form-control.form-group__select.single-quant
+																option 01
+																option 02
+												.seller-info
+													p.product-seller__by
+														| Sold by
+														a(href="seller.html").product-seller__link Susheela motors
+
+													p.seller-info__desp
+														| View 
+														a(href="javascript:void(0)").seller-info__link 2 sellers
+														| selling the same product starting from Rs. 4,290
+
+													.other-sellers.clearfix
+														.close-icon-cont.clearfix
+															i.mb-icon-close
+														.other-sellers__item.clearfix.first
+															.clearfix
+																.pull-left
+																	a(href="#").product-seller__link Susheela motors
+																.pull-right
+																	p.spare-info__price Rs. 4,300
+																	del.spare-info__price.spare-info__price--striked Rs. 5,300
+																	span.spare-info__discount 10%
+																	.select-dropdown
+																		select.form-control.form-group__select.single-quant
+																			option 01
+																			option 02
+															.buttons-container
+																a(href="#").button.button--primary-white.button--xs add to cart
+																a(href="#").button.button--link.button--underline.button--xs add to wishlist
+														.other-sellers__item.clearfix
+															.clearfix
+																.pull-left
+																	a(href="#").product-seller__link Susheela motors
+																.pull-right
+																	p.spare-info__price Rs. 4,300
+																	del.spare-info__price.spare-info__price--striked Rs. 5,300
+																	span.spare-info__discount 15%
+																	.select-dropdown
+																		select.form-control.form-group__select.single-quant
+																			option 01
+																			option 02
+															.buttons-container
+																	a(href="#").button.button--primary-white.button--xs add to cart
+																	a(href="#").button.button--link.button--underline.button--xs add to wishlist
+
+											.spare-info__buttons
+												a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+												a.button.button--link.button--underline(href='javascript:void(0);') add to wish list
+
+									li.spare-block__item(data-list='number2')
+										.spare-info
+											.spare-counts 2
+											.spare-info-wrap.clearfix
+												.spare-info__left
+													p.spare-info__title 21C-E1549-00
+													span.spare-info__subtitle Sprocket, Cam Chain
+													.spare-info__labels
+														ul
+															li.label.label-default Cilinder
+															li.label.label-default Silintar
+															li.label.label-default Tanki
+												.spare-info__right
+													p.spare-info__price Rs. 2,300
+													.select-dropdown
+														select.form-control.form-group__select.single-quant
+															option 01
+															option 02
+											.spare-info__buttons
+												a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+												a.button.button--link.button--underline(href='javascript:void(0);') add to wish list
+
+									li.spare-block__item(data-list='number3')
+										.spare-info
+											.spare-counts 3
+											.spare-info-wrap.clearfix
+												.spare-info__left
+													p.spare-info__title 21C-E1400-00
+													span.spare-info__subtitle Crankshaft Assembly
+													.spare-info__labels
+														ul
+															li.label.label-default Cilinder
+															li.label.label-default Silintar
+															li.label.label-default Tanki
+															
+												.spare-info__right
+													p.spare-info__price Rs. 4,300
+													.select-dropdown
+														select.form-control.form-group__select.single-quant
+															option 01
+															option 02
+											.spare-info__buttons
+												a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+												a.button.button--link.button--underline(href='javascript:void(0);') add to wish list
+
+									li.spare-block__item(data-list='number4')
+										.spare-info
+											.spare-counts 4
+											.spare-info-wrap.clearfix
+												.spare-info__left
+													p.spare-info__title 21C-E1549-00
+													span.spare-info__subtitle Sprocket, Cam Chain
+													.spare-info__labels
+														ul
+															li.label.label-default Cilinder
+															li.label.label-default Silintar
+															li.label.label-default Tanki
+												.spare-info__right
+													p.spare-info__price Rs. 2,300
+													.select-dropdown
+														select.form-control.form-group__select.single-quant
+															option 01
+															option 02
+											.spare-info__buttons
+												a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+												a.button.button--link.button--underline(href='javascript:void(0);') add to wish list
+			
+
+
+
+	//START: Login Modal- User
+	include jade/user-login-modal.jade
+
+
+	//START: Signup Modal- User
+	include jade/user-signup-modal.jade
+
+	
+	//START: Login Modal - Quickorder
+	include jade/quickOrder-login-modal.jade
+
+
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+		
+	include jade/scripts.jade
+	+script(page_name)
+
+	
+
+
+
+
+
+

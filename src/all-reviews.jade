@@ -1,0 +1,40 @@
+doctype html
+- var page_name = "all-reviews"
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Seller Reviews
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow.my-orders
+
+	//START: Header
+	include jade/header-before-login.jade
+	//START: Main
+	main.main-height
+		section
+			.container
+				.row
+					.col-sm-10.col-sm-offset-1
+						.user-review-block
+							h4.text-uppercase.ratings-heading reviews and ratings
+							.col-sm-3.col-md-2.user-review-block-text
+								span.text-uppercase for susheela motors
+								.rating
+									i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+								span.review-text 12/04/2017
+							.col-sm-9.col-md-10
+								p I bought parts from Susheela motors is a leading manufacture of Motor bike parts and whole sale automobile industry. Lorem Ipsumdoler sit amet Motor bike parts and whole sale automobile industry industry.Lorem Ipsumdoler sit amet.Lorem Ipsumdoler sit amet
+
+	//START: Plugin Scripts
+	include jade/scripts.jade
+	+script(page_name)
+
+	

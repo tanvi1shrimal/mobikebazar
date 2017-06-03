@@ -1,0 +1,77 @@
+doctype html
+
+- var page_name = "order-success"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Order success
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow.payment.payment--options
+	header.navbar.navbar--noborder.navbar-white.navbar-fixed-top
+		.container-fluid
+			
+			.navbar-header
+				a.navbar-brand(href='index.html')
+					img(src="img/logo.svg", alt="Mobike Bazar")
+
+			ul.nav.navbar-nav.navbar-right.hidden-xs.secure-options
+				li.secure-options__list
+					i.mb-icon-secure-payment
+					| secure payment
+				li.secure-options__list
+					i.mb-icon-gaurantee
+					| 100% Genuine parts
+
+	//START: Main
+	main.main-cart.main-height
+
+		//START: Progress Bar
+		section.status-process-bar
+			.container-fluid
+				.row
+					.orders-title.text-center.orders-title--cart.orders-title--border
+						ul#progressbar.bike-stepwizard__row.setup-panel
+
+							li.bike-stepwizard__step.current-step
+								a.bike-stepwizard__link
+									i.mb-icon-right
+								p.bike-stepwizard__option cart
+
+							li.bike-stepwizard__step.current-step
+								a.bike-stepwizard__link 
+									i.mb-icon-right
+								p.bike-stepwizard__option delivery
+
+							li.bike-stepwizard__step.current-step
+								a.bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option payment
+						.bike-stepwizard__first-child
+		//START: Payment- Cart
+		section.payment-section
+			.container-fluid
+				.row
+					.order-msg-container.text-center
+						.order-success-img
+							img(src="img/order-success-cart.png", alt="Order success")
+
+						h4.order-success-msg Your payment has been completed successfully!
+						h4.order-success-msg utr number - 
+							span 123456
+
+						.continue-shopping
+							a(href="index.html").button.button--lg.button--primary-white continue shopping
+							p.or-content or
+							a(href="my-orders.html").orders-link go to my orders
+
+	//START: Footer cards
+
+	include jade/footer-after-login.jade
+	
+	include jade/scripts.jade
+	+script(page_name)

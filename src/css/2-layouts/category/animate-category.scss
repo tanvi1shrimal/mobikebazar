@@ -1,0 +1,52 @@
+// //Animation for listing part
+
+// .animated {
+//     -webkit-animation-duration: 1s;
+//     animation-duration: 1s;
+//     -webkit-animation-fill-mode: both;
+//     animation-fill-mode: both;
+// }
+// @media(max-width: $xs-max) {
+//     .fadeInSlide {
+//         -webkit-animation-name: fadeInSlidexs;
+//         animation-name: fadeInSlidexs;
+//     }
+// }
+// @media(min-width: $sm) {
+//     .fadeInSlide {
+//         -webkit-animation-name: fadeInSlide;
+//         animation-name: fadeInSlide;
+//     }
+//     // .fadeInDown {
+//     //     -webkit-animation-name: fadeInDown;
+//     //     animation-name: fadeInDown;
+//     // }
+// }
+
+
+// @-webkit-keyframes fadeInSlide{
+// 	0%{opacity:0;-webkit-transform:translate3d(0,30px,0)}
+// 	100%{opacity:1;-webkit-transform:none}
+// }
+// @keyframes fadeInSlide{
+// 	0%{opacity:0;-webkit-transform:translate3d(0,30px,0);transform:translate3d(0,30px,0)}
+// 	100%{opacity:1;-webkit-transform:none;transform:none}
+// }
+
+// @-webkit-keyframes fadeInSlidexs{
+//     0%{opacity:0;-webkit-transform:translate3d(20px,0,0)}
+//     100%{opacity:1;-webkit-transform:none}
+// }
+// @keyframes fadeInSlidexs{
+//     0%{opacity:0;-webkit-transform:translate3d(20px,0,0);transform:translate3d(20px,0,0)}
+//     100%{opacity:1;-webkit-transform:none;transform:none}
+// }
+
+// // @-webkit-keyframes fadeInDown{
+// //     0%{opacity:0;-webkit-transform:translate3d(0,-20px,0)}
+// //     100%{opacity:1;-webkit-transform:none}
+// // }
+// // @keyframes fadeInDown{
+// //     0%{opacity:0;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}
+// //     100%{opacity:1;-webkit-transform:none;transform:none}
+// // }

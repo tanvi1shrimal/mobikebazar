@@ -1,0 +1,68 @@
+.card-holders {
+	background-color: $white;
+	padding: 20px 0px;
+	z-index: 4;
+	position: relative;
+	border-top: 1px solid $bordertable;
+	border-bottom: 2px solid $red;
+	height:  100px;
+	margin-top: -100px;
+	
+	@media(min-width: $sm) {
+		height:  77px;
+		margin-top: -77px;
+	}
+
+	@media(min-width: $lg) {
+		margin-top: -42px;
+	}
+
+}
+.card-container {
+	@media(min-width: $sm) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media(min-width: $sm) {
+			padding: 0 15px;
+		}
+		@media(min-width: $md) {
+			padding: 0 25px;
+		}
+	}
+
+	.contact-us-btn {
+		text-align: center;
+		margin-top: 15px;
+		font-family: $OpenSans-Regular;
+		font-size: 12px;
+		text-transform: capitalize;
+		color: $black333;
+		
+		@media(min-width: $sm) {
+			margin-top: 0px
+		}
+
+		@media(min-width: $md) {
+			font-size: 13px;
+		}
+
+		a {
+			color: $blue042443;
+			font-family: $OpenSans-Semibold;
+			margin-left: 5px;
+		}
+	}
+}
+
+.payment-card {
+	>img {
+		margin: 0 auto;
+	}
+}
+
+body,
+html {
+	height: 100%;
+	min-height: 100%;
+}

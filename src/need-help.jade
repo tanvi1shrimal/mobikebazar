@@ -1,0 +1,90 @@
+doctype html
+- var page_name = "need-help"
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Reviews
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow
+	//START: Header
+	include jade/header-before-login.jade
+	//START: Main
+	main.main-height
+		section.need-help-section
+			.container
+				.row
+					.col-sm-10.col-sm-offset-1
+						.col-sm-6
+							.reach-out-us-block
+								h3.text-uppercase reach out to us
+								form
+									.form-group
+										span.input.input--hoshi
+											input#full-name.input__field.input__field--hoshi(type='text')
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='full-name')
+												span.input__label-content.input__label-content--hoshi Your name
+									.form-group
+										span.input.input--hoshi
+											input#email-field.input__field.input__field--hoshi(type='text' data-error="Please enter email address" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='email-field')
+												span.input__label-content.input__label-content--hoshi Email
+									.form-group
+										span.input.input--hoshi
+											input#mobile.input__field.input__field--hoshi(type='text' data-error="Please enter email address" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='mobile')
+												span.input__label-content.input__label-content--hoshi Your mobile number
+									.form-group
+										span.input.input--hoshi
+											textarea#message.input__field.input__field--hoshi(type='text' data-error="Please enter email address" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='message')
+												span.input__label-content.input__label-content--hoshi Message
+									button(type='submit').button.button--sm.button--primary-white Send a message
+						.col-sm-6
+							.footer__block.need-help-contact
+								h4.footer__header.heading-sm connect with us
+								address.mb-address
+									i.mb-icon-location.mb-address__icon(aria-hidden='true')
+									| 49,Aditya Nilaya,Near Aakruthi Apartment 27th main,Hsr layout 2nd sector Bangalore - 560102.
+								ul.footer-list
+									li.footer-list__item
+										a.footer-list__link(href='tel:+91 9414111060')
+											i.mb-icon-phone.mb-address__icon(aria-hidden='true')
+											|+91 9414111060
+									li.footer-list__item
+										a.footer-list__link(href='mailto:sellers@mobikebazar.com')
+											i.mb-icon-mail.mb-address__icon(aria-hidden='true')
+											| sellers@mobikebazar.com
+								ul.social
+									li.social__item
+										a.social__link.social__link--facebook(href='#')
+											i.mb-icon-facebook.social__icon
+									li.social__item
+										a.social__link.social__link--twitter(href='#')
+											i.mb-icon-twitter.social__icon
+									li.social__item
+										a.social__link.social__link--linkedin(href='#')
+											i.mb-icon-linkedin.social__icon
+		
+		//- a(href="#").pop-up-message
+		//- //- .pop-up-message
+		//- //- 	a.btn--pop-up(href="#")
+		//- //- 		i#open-pop-up.mb-icon-facebook.social__icon
+		//- //- 		#close-pop-up.close-pop-up
+		//- //- 			span.close-mark.close-mark--hide
+		//- .pop-up-panel
+		//- 	.pop-up-header
+		//- 		h4.text-transform conversations
+		//- 	.pop-up-body
+		//- 		ul.
+		//- 	.pop-up-footer
+
+
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+	//START: Plugin Scripts
+	include jade/scripts.jade
+	+script(page_name)

@@ -1,0 +1,52 @@
+#quickOrderLogin{
+	.modal-dialog {
+		@media(min-width: $sm) {
+			width: 440px;
+		}
+		@media(min-width: $lg) {
+			width: 410px;
+		}
+	}
+	.login-form {
+		@media(min-width: $sm) {
+			padding: 0 15px;
+		}
+	}
+}
+
+.forgot-link.button {
+	font-family: $Raleway-Medium;
+	font-size: 14px;
+	text-transform: capitalize;
+	text-decoration: none;
+	margin-bottom: 15px;
+	font-weight: inherit;
+	&:hover {
+		text-decoration: underline;
+	}
+	@media(min-width: $md) {
+		font-size: 12px;
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	@media(min-width: $lg) {
+		font-size: 14px;
+	}
+}
+.form-button {
+	padding-top: 20px;
+}
+.form-bottom-link {
+	font-family: $Raleway-Medium;
+	font-size: 14px;
+	line-height: 24px;
+	color: $black666;
+	margin-top: 10px;
+	a {
+		text-transform: capitalize;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 24px;
+	}
+}

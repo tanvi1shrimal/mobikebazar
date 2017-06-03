@@ -1,0 +1,74 @@
+.delivery {
+	padding: 0px;
+	border: 1px solid $borderdfdfdf;
+	margin-top: 20px;
+	background-color: $white;
+
+	@media(min-width: $sm) {
+		position: absolute;
+		border: 0px;
+		top: 50%;
+		right: 0px;
+		padding-left: 15px;
+		transform: translateY(-50%);
+		margin-top: -50px;
+	}
+	@media(min-width: $md) {
+		margin-top: -40px;
+	}
+	@media(min-width: $lg) {
+		padding-left: 50px;
+	}
+
+	h3 {
+		padding: 15px;
+		border-bottom:  1px solid $borderdfdfdf;
+		font-weight: 600;
+	}
+	&__title {
+		margin: 0px;
+		color: $black999;
+		font-size: 12px;
+		font-family: $OpenSans-Semibold;
+		margin-bottom: 15px;
+
+		@media(min-width: $sm) {
+			margin-bottom: 7px;
+		}
+
+
+	}
+
+	&__info {
+		margin: 0px;
+		color: $black333;
+		font-size: 12px;
+		font-family: $OpenSans-Semibold;
+
+		@media(min-width: $md) {
+			font-size: 14px;
+		}
+	}
+	>div {
+		padding: 0 15px;
+
+		@media(min-width: $sm) {
+			margin-bottom: 20px;
+			//max-width: 160px;
+		}
+	}
+
+	&__charge-details {
+		margin-top: 30px;
+	}
+	
+	&__shipping {
+		p {
+			line-height: 22px;
+		}
+	}
+}
+
+.paymnent-info {
+	margin-bottom: 40px;
+}

@@ -1,0 +1,93 @@
+.order-success-img {
+	margin: 40px 0 50px ;
+
+	@media(min-width: $sm) {	
+		margin: 0px 0 60px;
+	}
+
+	@media(min-width: $lg) {	
+		margin-bottom: 70px;
+	}
+}
+.order-msg-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@media(min-width: $sm) {
+
+		height: calc(100vh - 145px)
+	}
+}
+.order-success-msg {
+	font-size: 14px;
+	font-family: Raleway-SemiBold;
+	color: $black333;
+	text-transform: uppercase;
+	max-width: inherit;
+	margin: 0 auto;
+	line-height: 24px;
+	font-weight: 600;
+
+	@media(min-width: $sm) {	
+		font-size: 16px;
+		max-width: 100%;
+		line-height: 26px;
+	}
+
+	@media(min-width: $md) {	
+		font-size: 18px;
+		line-height: 28px;
+	}
+}
+
+.continue-shopping {
+	margin: 20px 0px;
+
+	@media(min-width: $sm) {	
+		margin-top: 35px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@media(min-width: $md) {	
+		margin-top: 40px;
+	}
+
+	.or-content {
+		margin: 25px auto;
+
+		@media(min-width: $sm) {
+			margin: 0px 30px;
+		}
+		@media(min-width: $md) {
+			margin: 0px 40px;
+		}
+
+		&::after,
+		&::before {
+			display: none;
+		}
+	}
+}
+.tabs-header--payment {
+	@media(min-width: $md) {
+		font-size: 16px;
+	}
+}
+.orders-link {
+	font-size: 13px;
+	font-family: $Raleway-SemiBold;
+	color: $red;
+	display: inline-block;
+	text-decoration: underline;
+	text-transform: uppercase;
+
+	@media(min-width: $sm) {
+		font-family: $Raleway-Bold;
+	}
+	@media(min-width: $md) {
+		font-size: 14px;
+	}
+}

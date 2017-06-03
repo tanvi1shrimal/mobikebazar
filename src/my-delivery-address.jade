@@ -1,0 +1,194 @@
+doctype html
+
+- var page_name = "my-delivery-address"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - My Delivery Address
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow.payment
+	header.navbar.navbar--noborder.navbar-white.navbar-fixed-top
+		.container-fluid
+			
+			.navbar-header
+				a.navbar-brand(href='index.html')
+					img.logo__image.logo__image--reg(src="img/logo.svg", alt="Mobike Bazar")
+
+			ul.nav.navbar-nav.navbar-right.hidden-xs.secure-options
+				li.secure-options__list
+					i.mb-icon-secure-payment
+					| secure payment
+				li.secure-options__list
+					i.mb-icon-gaurantee
+					| 100% Genuine parts
+
+	//START: Main
+	main.main-cart.main-height
+
+		//START: Progress Bar
+		section.status-process-bar
+			.container-fluid
+				.row
+					.orders-title.text-center.orders-title--cart
+						ul#progressbar.bike-stepwizard__row.setup-panel
+
+							li.bike-stepwizard__step.current-step
+								a(href='my-cart.html').bike-stepwizard__link
+									i.mb-icon-right
+								p.bike-stepwizard__option cart
+
+							li.bike-stepwizard__step.current-step
+								a.bike-stepwizard__link 
+									i.mb-icon-right
+								p.bike-stepwizard__option delivery
+
+							li.bike-stepwizard__step
+								a.bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option payment
+						.bike-stepwizard__first-child
+		//START: Payment- Cart
+		section.my-delivery-address
+			.container-fluid
+				.row
+					.col-sm-8.col-md-6.col-md-offset-1
+
+						h4.tabs-header.tabs-header--cart select delivery address
+						.row
+							.col-sm-6.col-md-6
+							
+								.address__block
+									//h3.address__title Default address
+									label.address__list.address__list--default
+										h4.customer-name pankaj jain
+										p.address__customer.address__customer--delivery
+											| 24 , Raheja apartment,
+											| Transport nagar, 
+											| Jaipur - 302004
+											| Mobile - 9916204062
+										.control.control--checkbox.address__select
+											input(type="checkbox")
+											.control__indicator
+
+										.edit-address
+											a(href="#").edit-address__btn Edit address
+											a(href="").edit-address__btn Remove
+							.col-sm-6.col-md-6
+								
+								.address__block
+									.address__list.address__list--new(data-toggle='modal', data-target='#addNewAdress' )
+										.address__address-new
+											i.mb-icon-add-address
+											p.address__new Add new address
+					
+					.col-sm-4.col-md-5.cart-details-card
+						.row
+							.cart-details-container
+								.col-sm-12
+									.cart-details
+										h5.cart-details__heading Your order
+										p.cart-details__info 
+											| Cart Total
+											span.pull-right.cart-details__price Rs. 8,600
+										
+										p.cart-details__info.cart-details__info--last-child
+											| Delivery charges
+											span.pull-right.cart-details__price Rs. 900
+										h4.cart-details__total
+											| Total Payable
+											span.pull-right.cart-details__total-price Rs. 9,500
+
+										.terms-policy
+											p.terms-policy__info * Please note delivery charges will be additional on the items.
+											
+											a(href="payment.html").button.button--md.button--primary-white.place-order-btn pay now
+
+	//START: Footer
+	include jade/footer-after-login.jade
+			
+
+	//START: Modal: Add new Address
+	#addNewAdress.modal.fade.modal--fullxs(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content.modal-content--height
+				.modal-header
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-close.modal__close-icon
+					h4.modal-title add new address
+				.modal-body
+					form.login-form
+						.row
+							.col-sm-6
+								.form-group
+									span.input.input--hoshi
+										input#pin-code.input__field.input__field--hoshi(type='text')
+										label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='pin-code')
+											span.input__label-content.input__label-content--hoshi Pincode
+							.col-sm-6
+								.form-group
+									span.input.input--hoshi
+										.select-dropdown
+											select.form-control.form-group__select.single-select2
+												option Locality/Town
+												option Bangaluru
+												option Mysuru
+												option Mangaluru
+						.row
+							.col-sm-6
+								.form-group
+									span.input.input--hoshi
+										.select-dropdown
+											select.form-control.form-group__select.single-select2
+												option City/District
+												option Bangaluru
+												option Mysuru
+												option Mangaluru
+							.col-sm-6
+								.form-group
+									span.input.input--hoshi
+										.select-dropdown
+											select.form-control.form-group__select.single-select2
+												option State
+												option Karnataka
+												option Odisa
+												option Dehli
+						.row
+							.col-sm-6
+								.form-group
+									span.input.input--hoshi
+										input#full-name.input__field.input__field--hoshi(type='text')
+										label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='full-name')
+											span.input__label-content.input__label-content--hoshi Full Name *
+							.col-sm-6
+								.form-group
+									span.input.input--hoshi
+										input#mobile-number.input__field.input__field--hoshi(type='text')
+										label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='mobile-number')
+											span.input__label-content.input__label-content--hoshi Mobile Number *
+						.row
+							.col-sm-12
+								.form-group
+									span.input.input--hoshi
+										textarea#address.input__field.input__field--hoshi(type='text', placeholder='Address *')
+										
+						.save-cancel
+							.save-cancel__block-1
+								.form-group
+									label.control.control--checkbox Make this as default address
+										input(type="checkbox")
+										.control__indicator
+							.save-cancel__block-2
+								.form-group.clearfix
+									button(type='button' data-dismiss="modal").button--link.forgot-link.cancel.pull-left cancel
+									button.button.button--primary-white.button--lg.save.pull-right save
+							
+	//START: Plugin Scripts
+	include jade/scripts.jade
+	+script(page_name)
+
+	

@@ -1,0 +1,134 @@
+
+.order-tabs-list {
+	border: 0px;
+	border: 0;
+	overflow-x: scroll;
+	display: flex;
+	overflow-y: hidden;
+
+	@media(min-width: $sm) {
+		overflow: hidden;
+		padding: 0 15px;
+	}
+	>li.active {
+
+			>a {
+				border: 0px;
+				background-color: transparent;
+				color: $red;
+				&:focus,
+				&:active,
+				&:hover {
+					border: 0px;
+					color: $red;
+					background-color: transparent;
+				}
+
+			position: relative;
+
+			&::after {
+					background-color: $red;
+					transform: translateX(-50%) scale(1);
+				}
+			}
+		}
+	//Styles to override bootstrap
+	> .order-tabs__item {
+		display: inline-table;
+
+		margin-left: 15px;
+
+		@media(min-width: $sm) {
+				margin-left: 35px;
+				&:first-child {
+					margin-left: 0;
+
+				}
+		}
+		&.has-width {
+			&--1 {
+				width: 107px;
+				@media(min-width: $sm) {
+					width: auto;
+				}
+			}
+			&--2 {
+				width: 74px;
+				@media(min-width: $sm) {
+					width: auto;
+				}
+			}
+			&--3 {
+				width: 110px;
+				@media(min-width: $sm) {
+					width: auto;
+				}
+			}
+		}
+
+
+		> a {
+			border: 0px;
+			padding:  0px 0 15px 0;
+			//margin-left: 15px;
+			background-color: transparent;
+			transition: 300ms all;
+			
+			// @media(min-width: $sm) {
+			// 	margin-left: 35px;
+			// }
+
+			&:hover,
+			&:focus {
+				color: $red;
+				border: 0px;
+				background-color: transparent;
+			}
+
+			&::after {
+				position: absolute;
+				content: '';
+				height: 2px;
+				width: 100%;
+				left: 50%;
+				bottom: 1px;
+				transform: translateX(-50%) scale(0);
+			}
+		}
+	}
+}
+
+.order-tabs {
+	@media(min-width: $sm) {
+		padding: 25px 15px;
+		margin-left: 130px;
+		margin-top: 77px;
+	}
+
+	@media(min-width: $md) {
+		padding: 30px 25px;
+		margin-left: 240px;
+	}
+	&__link {
+		text-transform: uppercase;
+		color: $black999;
+		font-size: 12px;
+		font-family: $OpenSans-Semibold;
+
+		@media(min-width: $sm) {
+			font-size: 14px;
+		}
+
+		@media(min-width: $md) {
+			font-size: 16px;
+
+		}
+	}
+	.ps-container.ps-active-x > .ps-scrollbar-x-rail, .ps-container.ps-active-y > .ps-scrollbar-y-rail {
+
+		@media(min-width: $sm) {
+
+			display: none;
+		}
+	}
+}

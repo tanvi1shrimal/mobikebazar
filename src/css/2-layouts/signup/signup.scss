@@ -1,0 +1,208 @@
+.sign-up-section {
+	background: url('../img/signup-bg.png') no-repeat center center;
+	background-size: cover;
+}
+.sign-up {
+	background-color: $white;
+	margin: 40px 15px 120px;
+	padding: 20px 25px;
+
+	@media(min-width: $sm) {
+		max-width: 450px;
+		margin: 40px auto 60px;
+	}
+
+	&__heading {
+		font-size: 16px;
+		font-family: $Raleway-Regular;
+		color: $black666;
+		margin-bottom: 30px;
+		font-weight: 600;
+
+		@media(min-width: $sm) {
+			font-size: 20px;
+		}
+	}
+
+	&__info {
+		font-family: $OpenSans-Regular;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $black666;
+		font-weight: 400;
+	}
+
+	&__google {
+		font-family: $OpenSans-Semibold;
+		font-size: 13px;
+		color: $black666;
+		text-transform: uppercase;
+		padding: 15px 32px;
+		border-radius: 6px;
+		border: 1px solid $border;
+		margin: 25px 0 40px 0px;
+		display: inline-block;
+
+		i {
+			padding-right: 30px;
+		}
+
+	}
+}
+
+.signup-form {
+	margin-top: 30px;
+
+	&__group {
+		margin-bottom: 35px;
+		position: relative;
+	}
+
+	&__label {
+		font-family: $OpenSans-Semibold;
+		font-size: 13px;
+		color: #999;
+		position: absolute;
+		top: 0px;
+		transition: 400ms all;
+		left: 0px;
+
+
+		@media(min-width: $sm) {
+			font-size: 14px;
+		}
+	}
+
+	&__input {
+		border: 0;
+		border-bottom: 1px solid $border;
+		width: 100%;
+		color: $black;
+		font-family: $OpenSans-Regular;
+		padding-bottom: 5px;
+
+		&:focus,
+		&:active,
+		&:visited{
+			border-color: $red;
+
+			+ .signup-form__label {
+				top: -20px;
+				font-size: 13px;
+				color: $red;
+			}
+		}
+		&.has-value {
+			border-color: $black666;;
+		}
+		&.has-value + .signup-form__label {
+				top: -20px;
+				color: #666;
+				font-size: 13px;
+
+		}
+	}
+
+	&__option {
+		font-family: $OpenSans-Semibold;
+		color: $black999;
+		font-size: 13px;
+		//text-transform: uppercase;
+
+		input {
+			display: none;
+
+			+ .label-text:before{
+
+				content:  "\f10c";
+				font-family: "fontAwesome";
+				font-style: normal;
+				font-weight: normal;
+				font-size: 18px;
+				speak: none;
+				width: 1em;
+				margin-right: 5px;
+				vertical-align: middle;
+				//line-height: 30px;
+			}
+			&:checked + .label-text{
+				
+				color: $red;
+
+				&:before {
+					content:  "\f192";
+				}
+			}
+
+		}
+		.label-text {
+			text-transform: capitalize;
+		}	
+		span{
+			text-transform: initial;
+			padding-right: 30px;
+		}
+
+		label {
+			//padding-right: 25px;
+			text-transform: capitalize;
+
+			&:last-child {
+				
+				padding-right: 0px;
+			}
+		}
+
+		@media(min-width: $sm) {
+			
+			font-size: 14px;
+		}
+	}
+
+	&__para {
+		font-family: $OpenSans-Regular;
+		font-size: 12px;
+		color: $black666;
+		text-align: center;
+
+		&--login {
+			text-align: left;
+
+			@media(min-width: $sm) {
+				text-align: right;
+			}
+		}
+
+		a {
+			color: $red;
+			text-transform: capitalize;
+			margin-left: 5px;
+		}
+	}
+}
+
+.login-button {
+	padding: 16px;
+	width: 100%;
+	background-color: $red;
+	color: $white;
+	font-size: 14px;
+	font-family: $OpenSans-Semibold;
+	text-align: center;
+    border: 0;
+    text-transform: uppercase;
+    margin: 20px 0 40px;
+    display: inline-block;
+}
+
+.recover-pw {
+	font-size: 12px;
+	font-family: $OpenSans-Regular;
+	color: #ef0000;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+	display: inline-block;
+	@media(min-width: $sm) {
+		float: left;
+	}
+}

@@ -1,0 +1,147 @@
+.bg-color-white{
+ background-color:#fff;
+}
+.cashback-block,.cashback-details-block{	
+	border:1px solid #e5e5e5;
+	font-family: $OpenSans-Regular;
+}
+.cashback-block{
+	padding:45px 0;
+	text-align:center;
+	margin-top:20px;
+	@media(min-width:768px){
+		margin-top:0;
+	}
+}
+.cashback-block__item{
+	span{
+		color:$red;
+		font-size:20px;
+
+		@media(min-width: $md) {
+			font-size: 30px;
+
+		}
+	}
+	p{
+		font-size:14px;
+		line-height:24px;
+		color:#666;
+	}
+}
+.cashback-details-block{
+	// padding:25px 0px;
+	margin:20px 0;
+		@media(min-width:768px){
+		margin-bottom: 0;
+	}
+
+	&__list{
+		padding:20px 10px 20px;
+		display: block;
+		overflow:hidden;		
+		li{			
+			font-size: 11px;
+			line-height: 21px;			
+		}
+		@media(min-width:768px){	
+			padding:25px 20px 25px;
+			li{
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}		
+	}
+	&__items{
+		border-top:1px solid #e5e5e5;
+	}
+}
+.cashback-month-row,.cashback-details-block__list{
+	display:table;
+	width:100%;
+	box-sizing: border-box;
+	overflow: hidden;
+	li{
+		float: left;
+		display: table-cell;
+		overflow: hidden;
+		box-sizing: border-box;
+	}
+}
+.cashback-month-row{
+	padding:15px 15px;	
+	position:relative;
+	@media(min-width:768px){
+		padding:25px 25px;
+  	}
+  &:before{
+  	content: " ";
+  	display: block;
+  	background-color:#e5e5e5;
+  	width: 90%;
+    height: 1px;
+    bottom: 0;
+    position: absolute;
+	@media(min-width:768px){
+		width: 88%;
+    }
+    @media(min-width:1200px){
+		width: 93%;
+    }
+  }
+  li{
+  	font-size: 11px;
+  	line-height: 21px;
+	@media(min-width:768px){
+		font-size: 14px;
+	  	line-height: 23px;
+  	}
+  }
+}
+
+.paid{
+color:#333;
+font-family: $OpenSans-Bold;
+}
+.cashback-details-block .cashback-details-block__items{
+	.cashback-month-row:last-child{
+		// border-bottom:0;
+		&:before{
+			display: none;
+		}
+	}
+}
+
+li.date{
+	width:15%;
+	@media(min-width: $md) {
+		font-size: 16px;
+	}
+}
+.summary{
+	width:35%;
+}
+li.amount{
+	width:30%;
+	text-align:center;
+	font-size: 11px;
+	font-family: $OpenSans-Semibold;
+	@media(min-width: $md) {
+		font-size: 14px;
+	}
+
+	&--debited {
+		color: $red;
+	}
+
+	&--credited {
+		color: $green;
+	}
+	&.credit {
+		font-family: $OpenSans-Regular;
+	}
+}
+.balance{
+	width:20%;
+	text-align:right;
+}

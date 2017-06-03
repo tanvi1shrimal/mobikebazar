@@ -1,0 +1,307 @@
+.section-quickorder-padding {
+	padding: 20px 0px;
+	position: relative;	
+}
+.quickorder {
+	.top-content {
+		position: relative;
+		padding: 0 15px 0px;
+		@media(min-width: $sm) {
+			display: flex;
+	    	align-items: center;
+	    	margin-bottom: 30px;
+	    	padding: 0 20px 20px;
+	    	border-bottom: 1px solid $border;
+	    }
+	    @media(min-width: $md) {
+			margin-bottom: 20px;
+			padding: 0 30px 20px;
+		}
+    	&__button {
+
+    		@media(min-width: $sm) {
+				margin: 0 30px;
+    		}
+    		@media(min-width: $md) {
+    			margin: 0 50px;
+    		}
+    	}
+		&__upload-links {
+			margin: 30px 0 40px;
+			@media(min-width: $sm) {
+				margin: 0px;
+			}
+			ul {
+
+				@media(max-width: $xs-max) {
+					display: flex;
+					justify-content: center;
+				}    			
+				li {
+					padding-left: 20px;
+					position: relative;
+					@media(min-width: $sm) {
+						padding-left: 20px;
+		    		}
+		    		@media(min-width: $md) {
+						padding-left: 25px;
+		    		}
+		    		&:first-child {
+						padding-left: 0;
+						padding-right: 20px;
+						@media(min-width: $sm) {
+							padding-right: 20px;
+			    		}
+			    		@media(min-width: $md) {
+							padding-right: 25px;
+			    		}
+						&:before {
+							content: none;
+						}
+					}
+					&.help-icon {
+						@media(min-width: $sm) {
+							position: absolute;
+							right: 15px;
+							top: 10px;
+							padding-right: 0;
+						}
+						@media(min-width: $md) {
+							right: 30px;
+							top: 15px;
+						}
+						&:before {
+							content: none;
+						}
+					}
+					&:before {
+						content: '';
+						background-color: $border;
+						position: absolute;
+					    left: 0;
+					    top: 0;
+					    width: 1px;
+					    height: 100%;
+					}
+					a {
+						cursor: pointer;
+						font-family: $Raleway-Bold;
+						font-size: 12px;
+						color: $red;
+						text-transform: uppercase;
+
+						@media(max-width: $xs-max) {
+							display: flex;
+						}
+						@media(min-width: $sm) {
+							font-size: 14px;
+			    		}
+			    		@media(min-width: $md) {
+			    			font-size: 16px;
+			    		}
+			    		span {
+			    			@media(max-width: $xs-max) {
+								width: 80px;
+							}
+							&.width55 {
+								@media(max-width: $xs-max) {
+									width: 55px;
+								}
+							}
+			    		}
+			    		i {
+			    			font-size: 20px; 
+			    			padding-right: 15px;
+			    			vertical-align: sub;
+			    			@media(min-width: $sm) {
+								font-size: 16px;
+								padding-right: 10px;
+				    		}
+				    		@media(min-width: $md) {
+				    			font-size: 24px;
+				    		}
+			    		}
+					}					
+				}
+			}
+		}
+		&--borderno {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}	
+	}
+
+	.middle-content {
+		border: 1px dashed $borderDashed;
+		background-color: $whitefdfdfd;
+		// height: 300px;
+		@media(min-width: $sm) {
+			height: 210px;
+			margin-bottom: 20px;
+		}
+		@media(min-width: $md) {
+			height: 285px;
+			margin-bottom: 40px;
+		}
+		&--verticallycenter {
+			display: flex;
+			align-items: center;
+    		justify-content: center;
+		}
+		&__button {
+			margin-top: 45px;
+			text-align: center;
+		}
+		&--listblock {
+			height: auto;
+			border: 0;
+			background-color: $lightGrey;
+			padding:0 15px 50px;
+			margin: 0 -15px;
+
+			@media(min-width: $sm) {
+				background-color: $white;
+				padding: 0;
+				margin: 0;
+			}
+		}
+	}
+}
+
+.no-data {
+	@media(max-width: $xs-max) {
+		padding: 30px 0;
+	}
+	p {
+		font-family: $Raleway-Medium;
+		font-size: 16px;
+		line-height: 26px;
+		color: $black333;
+		@media(min-width: $sm) {
+			font-size: 22px;
+			line-height: 32px;
+		}
+		@media(min-width: $md) {
+			font-size: 24px;
+			line-height: 34px;
+		}
+	}
+	span {
+		font-family: $OpenSans-Regular;
+		font-size: 12px;
+		line-height: 22px;
+		color: $black999;
+		@media(min-width: $sm) {
+			font-size: 16px;
+			line-height: 26px;
+		}
+		@media(min-width: $md) {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+}
+
+
+//CSS for quickorder page 2
+.listblock {
+	&__header {
+		border-bottom: 1px solid $borderlight;
+		padding: 10px 0 5px;
+		@media(min-width: $sm) {
+			border-bottom: 0;
+		}
+	}
+	&__title {
+		font-family: $Raleway-Medium;
+		color: $black333;
+		display: inline-block;
+		font-size: 16px;
+		margin: 10px 0;
+		vertical-align: middle;
+
+		@media(min-width: $sm) {
+			font-size: 22px;
+		}
+		@media(min-width: $md) {
+			font-size: 24px;
+		}
+	}
+	&__createtime {
+		font-family: $OpenSans-Regular;
+		color: $black999;
+		display: inline-block;
+		padding-left: 15px;
+		font-size: 12px;
+		vertical-align: middle;
+
+		@media(min-width: $sm) {
+			font-size: 14px;
+			padding-left: 35px;
+		}
+		@media(min-width: $md) {
+			font-size: 18px;
+			padding-left: 30px;
+		}
+	}
+	&__iconDelete {
+		color: $red;
+		display: inline-block;
+		margin-left: 15px;
+		font-size: 18px;
+		text-align: center;
+	    width: 35px;
+	    height: 25px;
+	    vertical-align: middle;
+	    cursor: pointer;
+
+		@media(min-width: $sm) {
+			margin-left: 20px;
+		}
+		@media(min-width: $md) {
+			margin-left: 30px;
+		}
+	}
+	&__table {
+		margin-top: 5px;
+		&--nocontent {
+			@media(max-width: $xs-max) {
+				text-align: center;
+				display: block;
+			}
+		}
+	}
+}
+
+.add-list-customizebtn {
+	@media(min-width: $sm) {
+		float: right;
+		margin-top: 15px;
+		background-color: $white;
+		border:2px solid $red;
+		color: $red;
+
+		&:hover,&:focus {
+			color:$white;
+		}
+		&::before{
+			background-color: $red;
+		}
+	}
+	@media(min-width: $lg) {
+		margin-top: 30px;
+	}
+}
+
+.input {
+	&__border {
+		padding: 12px;
+		border: 1px solid $bordertable;
+		width: 100%;
+		margin-top: 10px;
+
+		@media(min-width: $sm) {
+			margin-top: 0px;
+		}
+	}
+}

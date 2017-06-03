@@ -1,0 +1,305 @@
+#addPartPopup, .addPartPopup {
+	.form-group {
+		margin-bottom: 20px;
+		@media(min-width: $sm) {
+			margin-bottom: 30px;
+		}
+
+		&--nomargin {
+			@media(min-width: $sm) {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	.has-available {
+		position: relative;
+		.form-group__control {
+			padding-right: 105px;
+		}
+	}
+	.help-icon {
+		@media(min-width: $sm) {
+			position: absolute;
+			right: 15px;
+			padding-right: 0;
+		}
+		&:before {
+			content: none;
+		}
+		a {
+			cursor: pointer;
+			font-family: $Raleway-Bold;
+			font-size: 12px;
+			color: $red;
+			text-transform: uppercase;
+
+			@media(min-width: $sm) {
+				font-size: 16px;
+    		}
+
+    		i {
+    			font-size: 20px; 
+    			padding-right: 15px;
+    			vertical-align: sub;
+    			@media(min-width: $sm) {
+					font-size: 16px;
+					padding-right: 10px;
+	    		}
+	    		@media(min-width: $md) {
+	    			font-size: 20px;
+	    		}
+    		}
+		}	
+	}
+}
+
+.has-available {
+	label~.has-available__feedback {
+		@media(max-width: $xs-max) {
+			top: 20px;
+		}
+	    top: 25px;
+	    opacity: 1;
+	    transition: opacity 1s ease 0.4s;
+	}
+	&__feedback {
+	    position: absolute;
+	    top: 0;
+	    right: 0px;
+	    z-index: 2;
+	    opacity: 0;
+	    width: auto;
+	    height: 44px;
+		line-height: 44px;
+	    text-align: center;
+	    pointer-events: none;
+	    color: $green;
+	    @media(max-width: $xs-max) {
+			display: flex;
+    		align-items: center;
+		}
+	    @media(min-width: $sm) {
+			right: 20px;
+	    }
+	}
+	&__icon-check {
+		@media(max-width: $xs-max) {
+			order: 2;
+			color: #fff;
+		    background: #07d241;
+		    width: 20px;
+		    height: 20px;
+		    border-radius: 50%;
+		    line-height: 20px;
+		    font-size: 12px;
+		}
+	}
+    &__availableText {
+		font-size: 14px;
+		font-family: $Raleway-Medium;
+		padding-right: 10px;
+		@media(min-width: $sm) {
+			padding-right: 0;
+			padding-left: 5px;
+		}
+    }
+}
+
+.addPart-content{
+	@media(max-width: $xs-max) {
+		padding: 15px;
+	}
+	&__row {
+		background: $white;
+		padding:25px 0 20px;
+		margin-bottom: 10px;
+		@media(min-width: $sm) {
+			padding: 15px 0 10px;
+			display: flex;
+			align-items: center;
+			margin-bottom: 0px;
+		}
+		&--OrSeparator {
+			background: transparent;
+			padding: 0;
+		}
+		&--spacebottom {
+			padding-bottom: 0;
+		}
+		&--category-vendorSection {
+			@media(max-width: $xs-max) {
+				background: transparent;
+				margin-bottom:0px;
+				padding: 0;
+			}
+			.addPart-content {
+				&__chooseCategory, &__vendor, &__partsAdded {
+					@media(max-width: $xs-max) {
+						background: $white;
+						padding: 25px 15px 0;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+		&:last-child  {
+			@media(max-width: $xs-max) {
+				padding: 0;
+				margin-bottom:40px;
+			}
+		}
+	}
+	
+	&__partsAddedText {
+		font-family: $Raleway-Medium;
+		color: $black666;
+		font-size: 14px;
+		@media(max-width: $xs-max) {
+			padding: 20px 0 0;
+		}
+
+		span {
+			font-family: $Raleway-SemiBold;
+			color: $black333;
+			font-size: 16px;
+		}
+	}
+
+	&__positionRel {
+		position: relative;
+	}
+
+	&__hintText {
+		font-family: $OpenSans-Regular;
+		color: $black999;
+		font-style: italic;
+		font-size: 12px;
+		margin: 8px 0 0;
+		position: absolute;
+	    bottom: -20px;
+	    left: 15px;
+		@media(min-width: $sm) {
+			font-size: 14px;
+			bottom: 5px;
+		}
+	}
+	
+	&__separator {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			height: 1px;
+			border-top: 1px solid $bordertable;
+		    left: 0;
+		    top: 50%;
+		    width: 100%;
+		    border-top: 1px solid #eee;
+		}
+	}
+	&__orText {
+		width: 30px;
+		height: 30px;
+		box-shadow: 0 0 4px rgba(77, 93, 140, 0.3);
+		background-color: $white;
+		font-family: $Raleway-SemiBold;
+		font-size: 12px;
+		color: $black666;
+		border-radius: 50%;
+		text-transform: uppercase;
+		line-height: 30px;
+		text-align: center;
+		margin: 20px auto;
+		position: relative;
+		z-index: 1;
+		@media(min-width: $sm) {
+			margin: 30px auto 40px;
+		}
+		@media(min-width: $lg) {
+			margin: 50px auto 70px;
+		}
+	}
+	&__chooseLinks {
+		font-family: $OpenSans-Regular;
+		font-size: 14px;
+		line-height: 28px;
+		color: $red;
+		cursor: pointer;
+	}
+	&__noteText {
+		font-family: $Raleway-Medium;
+		font-size: 14px;
+		color: $black333;
+		position: absolute;
+    	top: 20px;
+	}
+	&__buttons {
+		@media(max-width: $xs-max) {
+			position: fixed;
+		    bottom: 0;
+		    width: 100%;
+		    left: 0;
+		    height: 50px;
+		    .button--link {
+				width: 50%;
+			    border: 1px solid $borderlightergray;
+			    height: 50px;
+			    text-align: center;
+			    text-decoration: none;
+			    color: $black999;
+			    font-size: 12px;
+			    line-height: 26px;
+			    background: $white;
+			    padding: 12px 15px;
+			    font-family: $Raleway-Bold;
+		    }
+		    .button--primary-white {
+		    	width: 50%;
+			    text-align: center;
+			    height: 50px;
+			    color: $white;
+			    background: $red;
+			    line-height: 26px;
+			    font-family: $Raleway-Bold;
+			    font-size: 12px;
+		    }
+
+		    &--relative {
+		    	position: relative;
+		    }
+		}
+		@media(min-width: $sm) {
+			margin:20px 15px 5px;
+			text-align: right;
+			position:relative;
+		}
+		.button--link {
+			@media(min-width: $sm) {
+				margin-right: 30px;
+			}
+		}
+	}
+}
+.ui-front {
+    z-index: 9999;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button, .ui-menu-item  {
+
+	font-family: $OpenSans-Regular;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active {
+	background: $blue00336a;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+	padding: 10px 20px;
+}
+.ui-widget-content {
+	border: 0px;
+}
+.ui-widget.ui-widget-content {
+	overflow-y: scroll;
+    height: auto;
+    max-height: 250px;
+    overflow-x: hidden;
+}

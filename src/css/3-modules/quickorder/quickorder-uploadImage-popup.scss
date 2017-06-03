@@ -1,0 +1,250 @@
+//CSS for upload Images Popup
+
+#uploadImagesPopup {
+	.modal-footer {
+		@media(max-width: $xs-max) {
+			border-top: 0;
+		}
+		@media(min-width: $sm ){
+			padding-top: 30px;
+		}
+		
+	}
+	.uploadbtn {
+		@media(min-width: $sm) {
+			width: 270px;
+			margin: 0;
+		}
+	}
+
+	.uploading-wrap {
+		@media(min-width: $sm) {
+			padding: 0;
+		}
+		&__content {
+			@media(min-width: $sm) {
+				padding: 35px 15px;
+			}
+		}
+		&__imageDragDrop{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__orText {
+			width: 30px;
+			height: 30px;
+			box-shadow: 0 0 4px rgba(77, 93, 140, 0.3);
+			background-color: $white;
+			font-family: $Raleway-SemiBold;
+			font-size: 12px;
+			color: $black666;
+			border-radius: 50%;
+			text-transform: uppercase;
+			line-height: 30px;
+    		text-align: center;
+    		margin: 0 45px;
+		}
+		&__addText {
+			padding: 15px 0;
+			font-family: $OpenSans-Regular;
+			font-size: 18px;
+			line-height: 28px;
+			color: $black999;
+		}
+		&__dragdrop-zone {
+			border: 1px dashed $borderDashed;
+			background-color: $whitefdfdfd;
+			font-family: $Raleway-Bold;
+			font-size: 16px;
+			line-height: normal;
+			display: flex;
+			width: 270px;
+			padding: 19px 20px;
+			text-transform: uppercase;
+		    justify-content: center;
+		    align-items: center;
+		    color: $black333;
+		}
+	}
+}
+// - End CSS for upload Images Popup
+
+
+//CSS for upload Images List Popup
+#uploadImagesListingPopup {
+	
+	.form-group {
+		margin-bottom: 20px;
+		@media(min-width: $sm) {
+			margin-bottom: 30px;
+		}
+	}
+	textarea {
+		@media(max-width: $xs-max) {
+			border:0;
+			padding: 8px 0;
+		}
+		@media(min-width: $sm) {
+			height: 99px;
+		}
+	}
+	.form-group__control--textarea1 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  	font-size: 12px;
+    	font-family: $OpenSans-Semibold;
+	}
+}
+.uploadImage-content {
+	@media(max-width: $xs-max) {
+		padding: 15px;
+	}
+
+	@media(max-width: $xs-max) {
+		&__row-xs {
+			display: flex;
+    		flex-direction: column;
+		}
+		&__image {
+			order: 1;
+		    display: flex;
+		    flex-direction: column;
+		}
+		&__desc {
+			order: 5;
+		    display: flex;
+		    flex-direction: column;
+		}
+		&__brand {
+			order: 2;
+		    display: flex;
+		    flex-direction: column;
+		}
+		&__model {
+			order: 3;
+		    display: flex;
+		    flex-direction: column;
+		}
+		&__varient {
+			order: 4;
+		    display: flex;
+		    flex-direction: column;
+		}
+	}
+
+	ul {
+		@media(max-width: $xs-max) {
+			// padding: 15px;
+			background: $white;
+		}
+	}
+
+	&__liting-row {
+		padding: 0px 15px 5px;
+		margin-bottom: 15px;
+		counter-increment: step-counter;
+		position: relative;
+		// background: $white;
+		@media(min-width: $sm) {
+			margin-bottom: 10px;
+			padding: 17px 15px 0;
+			&:before {
+				content: '';
+				font-family: $OpenSans-Regular;
+				font-size: 16px;
+				color: $black333;
+				position: absolute;
+				left: 15px;
+				top: 15px;
+				content: counter(step-counter);
+			}
+		}
+		&:first-child {
+			.uploadImage-content__separator {
+				padding-top:0;
+			}
+		}
+		&:last-child {
+			.uploadImage-content__separator {
+				border-bottom: 0;
+			}
+			
+		}
+	}
+	
+	.productImageParts {
+		margin: 0 -15px;
+		@media(min-width: $sm) {
+			margin: 0;
+		    margin-left: 25px;	
+		}
+		img {
+			margin: 0 auto;
+			@media(min-width: $sm) {
+			    width: 100%;
+			}
+		}
+	}
+
+	&__buttons {
+		@media(max-width: $xs-max) {
+			position: fixed;
+		    bottom: 0;
+		    width: 100%;
+		    left: 0;
+		    height: 50px;
+		    z-index: 22;
+		    .button--link {
+				width: 50%;
+			    border: 1px solid $borderlightergray;
+			    height: 50px;
+			    text-align: center;
+			    text-decoration: none;
+			    color: $black999;
+			    font-size: 12px;
+			    line-height: 26px;
+			    background: $white;
+			    padding: 12px 14px;
+			    font-family: $Raleway-Bold;
+		    }
+		    .button--primary-white {
+		    	width: 50%;
+			    text-align: center;
+			    height: 50px;
+			    color: $white;
+			    background: $red;
+			    line-height: 26px;
+			    font-family: $Raleway-Bold;
+			    font-size: 12px;
+		    }
+		}
+		@media(min-width: $sm) {
+			margin:0 15px 5px;
+			text-align: right;
+		}
+		.button--link {
+			@media(min-width: $sm) {
+				margin-right: 30px;
+			}
+		}
+
+		&--relative {
+			position: relative;
+		}
+	}
+
+	&__separator {
+		order: 6;
+	    display: flex;
+	    flex-direction: column;
+		clear: both;
+		border-bottom: 1px solid $bordertable;
+		@media(min-width: $sm) {
+			margin: 0 15px;
+		}
+	}
+
+	.select2-container {
+		width: 100% !important;
+	}
+}
+// - End CSS for upload Images List Popup

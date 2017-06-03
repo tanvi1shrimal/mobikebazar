@@ -1,0 +1,130 @@
+doctype html
+- var page_name = "review"
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Reviews
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow.my-orders
+	//START: Header
+	include jade/header-before-login.jade
+	//START: Main
+	main.main-height
+		section
+			.container
+				.row
+					.col-sm-10.col-sm-offset-1.mb-reviews-block
+						.mb-review
+							.col-sm-9.mb-review-content
+								a(href="category-listing.html").text-capitalize.back-link
+									i.fa.fa-angle-left(aria-hidden='true') back
+								h4.text-uppercase susheela motors
+								p Susheela motors is a leading manufacture of Motor bike parts and whole sale automobile industry.Lorem Ipsumdoler sit amet Motor bike parts and whole sale automobile industry.
+							.col-sm-3.review-pop-up
+								button( type='button', data-toggle='modal', data-target='#myModal').margin-50.button.button--primary-white.button--sm write review
+								#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+									.modal-dialog(role='document')
+										.modal-content
+											.modal-header
+												h5#exampleModalLabel.modal-title.text-capitalize rate and review 
+												button.close(type='button', data-dismiss='modal', aria-label='Close')
+													span(aria-hidden='true') ×
+											.modal-body
+												.user-review-block.user-review-block--align.border-0
+													.user-review-block-text.pop-up-align
+														span.text-color.text-uppercase sravani
+														.rating
+															i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+															i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+															i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+															i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+															i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+														span.review-text 12/04/2017
+													.post-review
+														p Your review will be posted publicly on the web
+													form.post-form
+														.form-group
+															span.input.input--hoshi
+																input#review-text.input__field.input__field--hoshi(type="text")
+																label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='review-text')
+																	span.input__label-content.input__label-content--hoshi Describe your experience			
+											.modal-footer
+												button.close-btn.btn.btn-secondary(type='button', data-dismiss='modal').text-uppercase cancel
+												button.close-btn.btn(type='button').text-uppercase post
+						.rating-and-review
+							.col-sm-5.rating-elements
+								.rating-star
+									p 5 star
+									.progress-bar
+								.rating-star
+									p 4 star
+									.progress-bar.progress-bar--theme-1
+								.rating-star
+									p 3 star
+									.progress-bar.progress-bar--theme-2
+								.rating-star
+									p 2 star
+									.progress-bar.progress-bar--theme-3
+								.rating-star
+									p 1 star
+									.progress-bar.progress-bar--theme-4
+							.col-sm-7.rating-star-show
+								span 3.0
+								.rating
+									i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+									i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+								span.review-text 125 reviews
+								span.review-text.review-text--block.text-capitalize.text-right showing 1-10 of 125
+						.user-review-block
+							.col-sm-3.col-md-2.user-review-block-text
+								a.reviews-link(href="all-reviews.html")
+									span.text-uppercase susheela motors
+									.rating
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+									span.review-text 12/04/2017
+							.col-sm-9.col-md-10
+								p I bought parts from Susheela motors is a leading manufacture of Motor bike parts and whole sale automobile industry. Lorem Ipsumdoler sit amet Motor bike parts and whole sale automobile industry industry.Lorem Ipsumdoler sit amet.Lorem Ipsumdoler sit amet. bought parts from Susheela motors is a leading I of Motor bike parts and whole sale automobile industry. Lorem Ipsumdoler sit amet Motor bike parts and whole sale automobile industry industry.Lorem Ipsumdoler sit amet.Lorem Ipsumdoler sit amet
+						.user-review-block
+							.col-sm-3.col-md-2.user-review-block-text
+								a.reviews-link(href="all-reviews.html")
+									span.text-uppercase ganeshan motors
+									.rating
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+									span.review-text 12/04/2017
+							.col-sm-9.col-md-10
+								p I bought parts from Susheela motors is a leading manufacture of Motor bike parts and whole sale automobile industry. Lorem Ipsumdoler sit amet Motor bike parts and whole sale automobile industry industry.Lorem Ipsumdoler sit amet.Lorem Ipsumdoler sit ametI bought parts from Susheela motors is a leading manufacture of Motor bike parts and whole sale automobile industry. Lorem Ipsumdoler sit amet Motor bike parts and whole sale automobile industry industry.Lorem Ipsumdoler sit amet.Lorem Ipsumdoler sit amet
+						.user-review-block
+							.col-sm-3.col-md-2.user-review-block-text
+								a.reviews-link(href="all-reviews.html")
+									span.text-uppercase mahindra motors
+									.rating
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--rated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+										i.mb-icon-ic-rating-star.rating__star.rating__star--unrated
+									span.review-text 12/04/2017
+							.col-sm-9.col-md-10
+								p I bought parts from Susheela motors is a leading manufacture of Motor bike parts and whole sale automobile industry. Lorem Ipsumdoler sit amet Motor bike parts and whole sale automobile industry industry.Lorem Ipsumdoler sit amet.Lorem Ipsumdoler sit amet
+
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+	//START: Plugin Scripts
+	include jade/scripts.jade
+	+script(page_name)
+	

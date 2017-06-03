@@ -1,0 +1,61 @@
+.need-help-section{
+	padding:40px 0;
+	@media(min-width:$sm){
+	padding:50px 0;
+	}
+}
+.reach-out-us-block{
+	h3{
+		margin:0 0 20px;
+	}
+}
+.need-help-contact{
+	margin-top: 30px;
+	@media(min-width:$sm){
+		margin: 0px 0 0 40px;
+	}
+	@media(min-width:$md){
+		margin-left:60px;
+	}
+}
+
+.mb-address {
+	font-size:14px;
+	line-height:24px;
+	color:#333;
+	margin-top:5px;
+}
+
+//btn-pop-up
+.pop-up-message{
+	position: fixed;
+	bottom:20px;
+	right:20px;
+	background-color: #e51e23;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	display:block;
+	transition:0.5s all;
+	cursor:pointer;
+	&:hover{
+		transform: scale(1.2,1.2);
+	}
+}
+.pop-up-panel{
+	position:absolute;
+	background-color:$white;
+	width:300px;
+	right:0;
+}
+.mb-address {
+	font-family: $OpenSans-Regular;
+
+	&__icon {
+		margin-right: 5px;
+		vertical-align:  bottom;
+	}
+}
+textarea {
+	resize: none;
+}

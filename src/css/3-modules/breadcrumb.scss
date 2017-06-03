@@ -1,0 +1,43 @@
+.breadcrumb {
+	background-color: $whitef3f3f3;
+	border-bottom: 1px solid $border;
+	border-radius: 0;
+	padding: 10px 15px;
+	margin-top: -1px;
+	position: relative;
+	@media(min-width: $sm){ 
+		padding: 10px 20px;
+	}
+	@media(min-width: $md){ 
+		padding: 10px 30px;
+	}
+	li {
+		font-family: $OpenSans-Semibold;
+		font-size: 12px;
+		line-height: 20px;
+		display: none;
+		@media(min-width: $sm){ 
+			display: inline-block;
+		}
+		a {
+			color: $black999;
+		}
+	}
+	li.active {
+		display: inline-block;
+		font-size: 13px;
+		color: $black666;
+		@media(min-width: $sm){ 
+			font-size: 12px;
+			color: $red;
+		}
+	}	
+	li+li {
+		&:before {
+			display: inline-block;
+			@media(max-width: 767px){ 
+				content: none;
+			}
+		}
+	}
+}

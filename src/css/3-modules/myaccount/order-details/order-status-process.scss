@@ -1,0 +1,120 @@
+.order-status {
+	text-align: center;
+	padding-bottom: 30px;
+	background-color: $white;
+	border: 1px solid $borderebebeb;
+	border-top: 0;
+
+	@media(min-width: $sm) {
+		margin-top: 18px;
+		padding-top: 45px;
+		border: 0;
+		border-top: 1px solid $borderebebeb;
+	}
+
+	&__stage {
+		display: inline-block;
+		font-size: 12px;
+		padding-right: 25px;
+		position: relative;
+		width: 33.33%;
+
+		&:last-child {
+
+			&::before {
+				display: none;
+			}
+		}
+		&::before {
+			position: absolute;
+			height: 1px;
+			content: '';
+			width: 100%;
+			//left: 75px;
+			top: 10px;
+			//transform: translate(-50%,-50%);
+			background-color: $greydddcdc;
+
+			@media(min-width: $sm) {
+				top: 13px;
+				
+			}
+			
+		}
+	}
+	
+	&__indicator {
+		height: 20px;
+		width: 20px;
+		border-radius: 50%;
+		margin: 0px auto;
+		background-color: $reddd000a;
+		position: relative;
+
+		@media(min-width: $sm) {
+			height: 25px;
+			width: 25px;
+		}
+
+		&::after {
+			position: absolute;
+			content: '\77';
+			font-family: 'mobike-bazar';
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			color: $white;
+			font-size: 10px;
+		}
+
+
+
+		&--shipped {
+			background-color: $yellowf57f00;
+		}
+
+		&--delivered {
+			background-color: $green00cd00;
+
+		}
+
+		&--blank {
+			background-color: $white;
+			border: 1px solid #dddcdc;
+			&::after {
+				display: none;
+			}
+		}
+
+		&--trackorder {
+			margin: 0;
+			float: left;
+
+			@media(min-width: $sm) {
+				margin: 0 auto;
+				float: none;
+			}
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-family: $Raleway-Bold;
+		color: $black666;
+		margin: 10px 0px 5px;
+
+		@media(min-width: $sm) {
+			//font-size: 20px;
+		}
+		@media(min-width: $md) {
+			font-size: 14px;
+		}
+
+	}
+
+	&__date {
+		color: $black999;
+		font-family: $OpenSans-Semibold;
+
+	}
+}

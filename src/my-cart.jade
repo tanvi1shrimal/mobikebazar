@@ -1,0 +1,169 @@
+doctype html
+
+- var page_name = "my-cart"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - My Cart
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow.payment
+	//START: Header
+	header.navbar.navbar--noborder.navbar-white.navbar-fixed-top
+		.container-fluid
+			
+			.navbar-header
+				a.navbar-brand(href='index.html')
+					img.logo__image.logo__image--reg(src="img/logo.svg", alt="Mobike Bazar")
+
+			ul.nav.navbar-nav.navbar-right.hidden-xs.secure-options
+				li.secure-options__list
+					i.mb-icon-secure-payment
+					| secure payment
+				li.secure-options__list
+					i.mb-icon-gaurantee
+					| 100% Genuine parts
+
+	//START: Main
+	main.main-cart.main-height
+
+		//START: Progress Bar
+		section.status-process-bar
+			.container-fluid
+				.row
+					.orders-title.text-center.orders-title--cart
+						ul#progressbar.bike-stepwizard__row.setup-panel
+
+							li.bike-stepwizard__step.current-step
+								a(href='my-cart.html').bike-stepwizard__link
+									i.mb-icon-right
+								p.bike-stepwizard__option cart
+
+							li.bike-stepwizard__step
+								a.bike-stepwizard__link 
+									i.mb-icon-right
+								p.bike-stepwizard__option delivery
+
+							li.bike-stepwizard__step
+								a.bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option payment
+						.bike-stepwizard__first-child
+		//START: Payment- Cart
+		section.my-delivery-address
+			.container-fluid
+				.row
+					.col-sm-8.col-md-6.col-md-offset-1
+						h4.tabs-header.tabs-header--cart Your Cart (2 items)
+						.order-product.col-sm-12.col-md-10
+							.order-product__title.clearfix
+								.product.pull-left
+									h5.product__number 21C-E1400-00
+									h5.product__number.product__number--small 21C-E1400-00
+									h5.product__category Crankshift Assembly
+								.pull-right
+									h5.product__price Rs. 2,150
+									del.product__price.product__price--striked Rs. 2,150
+									span.spare-info__discount 10%
+							span.select-quantity
+								span.select-quantity__info qty:
+								select.select-quant
+									option 1
+									option 2
+									option 3
+							.product-seller
+								p.product-seller__by
+									| Sold by 
+									a(href="#").product-seller__link  Susheela motors
+								p.product-seller__qant Only 8 items left in the stock.
+							.seller-info
+								p.seller-info__desp
+									| View 
+									a(href="javascript:void(0)").seller-info__link 2 sellers
+									| selling the same product starting from Rs. 4,290
+
+								.other-sellers.clearfix
+									.close-icon-cont.clearfix
+										i.mb-icon-close
+									.other-sellers__item.clearfix
+										.clearfix
+											.pull-left
+												a(href="#").product-seller__link Susheela motors
+
+
+											.pull-right
+												p.spare-info__price Rs. 4,300
+												del.spare-info__price.spare-info__price--striked Rs. 5,300
+												span.spare-info__discount 10%
+										.buttons-container
+												a(href="#").button.button--primary-white.button--xs add to cart
+												a(href="#").button.button--link.button--underline.button--xs add to wishlist
+									.other-sellers__item.clearfix
+										.clearfix
+											.pull-left
+												a(href="#").product-seller__link Susheela motors
+
+											.pull-right
+												p.spare-info__price Rs. 4,300
+												del.spare-info__price.spare-info__price--striked Rs. 5,300
+												span.spare-info__discount 15%
+										.buttons-container
+												a(href="#").button.button--primary-white.button--xs add to cart
+												a(href="#").button.button--link.button--underline.button--xs add to wishlist
+							.edit-btns
+								span.edit-btns__block-1
+									a(href="#").edit-btns__link edit items
+									a(href="").edit-btns__link save to wishlist
+								span.edit-btns__block-2
+									a(href="#").edit-btns__link remove
+					
+					.col-sm-4.col-md-5.cart-details-card
+						.row
+							.cart-details-container
+								.col-sm-12
+									.cart-details
+										h5.cart-details__heading Cart details
+										p.cart-details__info 
+											| Cart Total
+											span.pull-right.cart-details__price Rs. 8,600
+										p.cart-details__info 
+											| Estimated VAT/CST (15%)
+											span.pull-right.cart-details__price Rs. 1,280
+										p.cart-details__info.cart-details__info--last-child
+											| Discount 
+											span.pull-right.cart-details__price Rs. 300
+										h4.cart-details__total.cart-details__total--total-price.cart-details__font.text-capitalize.padding.padding-left
+											| Order Total
+											span.pull-right.cart-details__total-price.cart-details__font Rs. 9,500
+										h4.cart-details__total.cart-details__total--total-price.cart-details__font.text-capitalize.cart-details__info--last-child.padding-left
+											| logistic details
+											span.pull-right.cart-details__total-price Rs. 4,000 
+										h4.cart-details__total.cart-details__total--total-price.text-capitalize.padding-left
+											| total payable
+											span.pull-right.cart-details__total-price Rs. 13,500
+										p.cart-details__info.padding Name of the transport
+										span.transport-name.text-capitalize.padding-left ram raju transport
+										.time
+											p.cart-details__info.text-capitalize.padding.padding-left expected delivery
+											span.padding-left 06-04-2016
+											span.padding-left 17:03
+										.terms-policy
+											p.terms-policy__info * Please note delivery charges will be additional on the items.
+											p.terms-policy__info.terms-policy__info--terms By placing the order, you have read and agreed to Mobikebazar.com 
+												a(href="#").terms-policy__link Terms of Use and Privacy policy
+											a(href="my-delivery-address.html").button.button--md.button--primary-white.place-order-btn place order
+
+		.push-footer
+	
+	//START: Footer 
+	include jade/footer-after-login.jade
+						
+	
+	//START: Plugin Scripts
+	include jade/scripts.jade
+	+script(page_name)
+

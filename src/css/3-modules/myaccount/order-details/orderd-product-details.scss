@@ -1,0 +1,78 @@
+.padding-0 {
+	padding: 0px;
+}
+
+.order-details-container {
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	padding-bottom: 30px;
+	border: 1px solid #dfdfdf;
+    border-bottom: 0;
+    @media(min-width: $sm) {
+    	border: 0px;
+    	padding-bottom: 0px;
+    }
+
+}
+
+.order-product-container {
+	order: 2;
+	display: flex;
+	flex-direction: column;
+	padding: 0px;
+	position: relative;
+
+	@media(min-width: $sm) {
+		order: 3;
+		//border-right: 1px solid $borderebebeb;
+
+		&::after {
+			position: absolute;
+			content: '';
+			height: 100%;
+			background-color: $borderebebeb;;
+			width: 1px;
+			right: 0;
+			text-align: 30px;
+			top: 20px;
+		}
+	}
+
+	.order__product {
+		@media(min-width: $sm) {
+			padding: 30px 20px 0 20px;
+		}
+		// @media(min-width: $md) {
+		// 	padding: 30px 20px 0 10px;
+		// }
+	}
+}
+
+.order-list-container {
+	border: 0px;
+	@media(min-width: $sm) {
+		border: 1px solid #dfdfdf;
+	}
+	background-color: transparent;
+	.order__tracking-details {
+		margin-top: 0px;
+		background-color: $white;
+		border: 1px solid #dfdfdf;
+		padding-bottom: 0px;
+		border-top: 0px;
+
+		@media(min-width: $sm) {
+			background-color: transparent;
+			//margin-top: 15px;
+			border: 0;
+		}
+	}
+
+}
+
+p.delivery__address {
+	@media(min-width: $sm) {
+		max-width: 140px;
+	}
+}

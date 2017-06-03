@@ -1,0 +1,278 @@
+doctype html
+- var page_name = "return-order"
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Return Order
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow.my-orders
+	//START: Header
+	include jade/header-after-login.jade
+	//START: Main
+	main.main-height
+
+		//START: User Profile
+		section.user-content
+			span.user-account my account
+			span.user-name Pankaj jain
+			span.pull-right
+				a(data-toggle="modal" data-target="#register-bike").register-bike-link register my bike
+		
+		//START: My Orders Tabs
+		section.orders-tabs-container
+			.container-fluid
+				.row
+					ul.order-options.hidden-xs
+						li.order-options__list.active
+							a.order-options__link(href="my-orders.html") my orders
+						li.order-options__list
+							a.order-options__link(href="my-wishlist.html") my wishlist
+						li.order-options__list
+							a.order-options__link(href="my-profile.html") my profile
+						li.order-options__list
+							a.order-options__link(href="my-address.html") my address
+					.col-sm-12.btn-holder.hidden-xs
+						a(href='#').button.button--primary-white.button--lg logout
+					h3.orders-title.text-center.visible-xs my orders
+					.tabs-content.order-tabs
+						.tab-content.orders-tab-content
+							.order
+								//START: Order on Query
+								.order__list
+									.order__placed-details
+										.order__number
+											span.order__status 
+											| OD19372987263438
+											span.order__price.hidden-xs Total Rs 3380
+										//.order__placed Order Placed on Thursday, Nov 09, 2016
+									.order__product
+										p.order-info Select the item you want to return
+										.order__product-details.pull-left
+											.form-group
+												label.control.control--checkbox(for='product-1')
+													img(src="img/order-1.png", alt="").order__image
+													input(type='checkbox', name='checkbox')#product-1
+													.control__indicator
+											//img(src="img/order-1.png", alt="").order__image
+										h5.product-name BAJAJ / AVENGER 180 / 2009 - Chain part
+									.order__product
+										.order__product-details.pull-left
+											.form-group
+												label.control.control--checkbox(for='product-2')
+													img(src="img/order-1.png", alt="").order__image
+													input(type='checkbox', name='checkbox')#product-2
+													.control__indicator
+											//img(src="img/order-1.png", alt="").order__image
+										h5.product-name BAJAJ / AVENGER 180 / 2009 - Chain part
+								
+							.col-sm-12.buttons-container
+								
+								a(href='my-orders.html').button.button--primary-white.button--lg cancel
+								a(href='return-order-1.html').button.button--primary-white.button--lg.button--next next
+										
+
+	//START: Footer 
+	include jade/footer-after-login.jade
+	
+	//START: Login Modal - Quickorder
+	include jade/quickOrder-login-modal.jade
+	
+	//START: Popup Bike Registarion
+	#register-bike.modal.bike-register.modal--fullxs.fade(role='dialog', tabindex="-1" )
+		.modal-dialog.modal__dialog
+			.modal-content
+				.modal-header
+					button(type='button' data-dismiss='modal').close.close.close--closebike
+						i.mb-icon-close.modal__close-icon
+					h4.modal-title.modal__title Bike registration
+				.modal-body.text-center
+					p.bike-register__info Do you want to register your bike?
+					.text-center
+						a.button.button--primary-red.button--primary-red--border.button--md(data-toggle="modal" data-target="#register-bike-popup-2" data-dismiss='modal') lets do it now
+					.text-center
+						a.bike-register__later(href='#' data-dismiss='modal') i will do it later &gt;&gt;
+	//START: Pop up bike brand variation
+	
+	#register-bike-popup-2.modal.modal--fullxs.fade(role='dialog', tabindex="-1")
+		.modal-dialog.modal__dialog
+			.modal-content
+				.modal-header.modal--header
+					
+					button(type='button' data-dismiss='modal').close.close--closebike
+						i.mb-icon-close.modal__close-icon
+					h4.modal-title.modal__title Register your vehicle
+
+
+				.modal-body.modal__body
+					
+					//START: Wizard Steps 
+					form#msform1.bike-stepwizard
+						ul#progressbar.bike-stepwizard__row.setup-panel
+							li.bike-stepwizard__step.bike-stepwizard__step--first.current-step(data-step-name="step-1")
+								a(href='#step-1' aria-controls="step-1" role="tab" data-toggle="tab").bike-stepwizard__link.active
+									i.mb-icon-right
+								p.bike-stepwizard__option.active brand
+
+							li.bike-stepwizard__step(data-step-name="step-2")
+								a(href='#step-2' aria-controls="step-2" role="tab" data-toggle="tab").bike-stepwizard__link 
+									i.mb-icon-right
+								p.bike-stepwizard__option model
+
+							li.bike-stepwizard__step(data-step-name="step-3")
+								a(href='#step-3' aria-controls="step-3" role="tab" data-toggle="tab").bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option variant
+
+						//START: Wizard Content
+
+					.tab-content.clearfix
+						#step-1.setup-content.tabpanel.tab-pane.active
+							h3.bike-brand__title.text-center Select your Brand
+							.bike-scrollbox
+								.bike-brand__wrap
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/bajaj.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/tvs.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/yamaha.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/suzuki.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/royal-enfield-logo.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-4.col-xs-6.bike-brand__block
+										a(href='#').bike-brand__link.bike-next
+											img(src='img/bike-brands/tvs.png').bike-brand__image
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+						#step-2.setup-content.tabpanel.tab-pane
+							h3.bike-brand__title.text-center Select your Model
+							.bike-scrollbox.clearfix
+								.bike-container.bike-brand__wrap.clearfix.col-sm-10.col-sm-offset-1
+									.col-sm-6.bike-brand__model
+										a(href='#').bike-brand__bike-link.bike-next-2
+											img(src='img/bike-brands/thunder-bird.png').bike-brand__bike-image.img-responsive
+											h3.bike-brand__bike-title Thunderbird 350
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-6.bike-brand__model
+										a(href='#').bike-brand__bike-link.bike-next-2
+											img(src='img/bike-brands/royal-enfield-1.png').bike-brand__bike-image.img-responsive
+											h3.bike-brand__bike-title Himalayan
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+									.col-sm-6.bike-brand__model
+										a(href='#').bike-brand__bike-link.bike-next-2
+											img(src='img/bike-brands/thunder-bird.png').bike-brand__bike-image.img-responsive
+											h3.bike-brand__bike-title Thunderbird 35
+											.bike-brand__overlay
+												svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 52 52')
+													circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+													path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+						#step-3.setup-content.tabpanel.tab-pane
+							h3.bike-brand__title.text-center You’ve selected 
+								span Himalayan
+							.bike-scrollbox.clearfix
+								.col-sm-6.col-sm-offset-3
+									a(href='#').bike-brand__bike-link.bike-submit
+										img(src='img/bike-brands/royal-enfield.png').img-responsive.bike-brand__bike-image
+									.text-center
+										a(data-toggle='modal',data-target='#register-bike-final-reg',data-dismiss='modal').button.button--primary-white.button--lg.proceed-btn PROCEED TO CATEGORIES
+	//START: Popup Bike Registarion
+	
+	#register-bike-final-reg.modal.bike-register.modal--fullxs.fade(role='dialog', tabindex="-1")
+		.modal-dialog.modal__dialog
+			.modal-content.modal__content
+				.modal-header
+					button(type='button' data-dismiss='modal').close.close.close--closebike
+						i.mb-icon-close.modal__close-icon
+					h4.modal-title.modal__title Register your vehicle
+				.modal-body.modal-scrollbar.text-center.clearfix
+					p.bike-register__info We would need your motorcycle’s
+					form(role='form').col-sm-6.col-sm-offset-3.bike-register__form
+						.row
+							.col-sm-12
+								.form-group
+									span.input.input--hoshi
+										input(type='text').input__field.input__field--hoshi
+										label(for='number').input__label.input__label--hoshi-color-1.input__label--hoshi
+											span.input__label-content--hoshi.input__label-content
+												| Registration Number
+					p.or-content.clear or
+
+					form(role='form').col-sm-6.col-sm-offset-3.bike-register__form
+						.row
+							.col-sm-12
+								.form-group
+									span.input.input--hoshi
+										input(type='text').input__field.input__field--hoshi
+										label(for='number').input__label.input__label--hoshi-color-1.input__label--hoshi
+											span.input__label-content--hoshi.input__label-content Engine Number
+					.text-center.clear
+						i.info Why should i provide these details ?
+						a(href='#' data-dismiss='modal').button.button--primary-white.button--lg Finish registration
+	//START: NEFT Details Modal
+	
+	#neft-details.modal.bike-register.modal--fullxs.fade(role='dialog', tabindex="-1")
+		.modal-dialog.modal__dialog
+			.modal-content.modal__content
+				.modal-header
+					button(type='button' data-dismiss='modal').close.close.close--closebike
+						i.mb-icon-close.modal__close-icon
+					h4.modal-title.modal__title.hidden Register your vehicle
+				.modal-body.modal-scrollbar.clearfix
+					h5.small-heading.small-heading--bank-details Bank details
+					.beneficiary-details
+						h3.beneficiary-name Beneficiary Name
+						h3.beneficiary-user-name Pankaj jain
+					.beneficiary-details
+						h3.beneficiary-name Beneficiary Account number
+						h3.beneficiary-user-name 000263552387
+					.beneficiary-details
+						h3.beneficiary-name Bank Name
+						h3.beneficiary-user-name ICICI
+					.beneficiary-details
+						h3.beneficiary-name IFSC Code
+						h3.beneficiary-user-name ICIH8342
+	
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+	//START: Plugin Scripts
+	include jade/scripts.jade
+	+script(page_name)
+	

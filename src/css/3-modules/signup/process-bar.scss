@@ -1,0 +1,156 @@
+
+.progress-top-bar {
+	.progress-wraper {
+		margin-top: 50px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.progress-bars{
+		display: flex;
+		overflow-x: scroll;
+		text-align: center;
+		@media(min-width: $sm) {
+			overflow: hidden;
+		}
+		&--top {
+			width: 100%;
+			padding: 30px 0 30px 0px;
+			background-color: $white;
+		}
+	}
+
+	.checkpoint-wraper {
+    	display: inline-table;
+		position: relative;
+	    z-index: 99;
+		width: 100%;
+		left: 0px;
+		transition: all 300ms ease-in-out;
+
+		&::before {
+			position: absolute;
+			content: '';
+			height: 2px;
+			width: 100%;
+			background-color: #cccccc;
+			top: 0;
+			top: 0;
+			z-index: 1;
+			left: -46.5%;
+		}
+
+		&:first-child {
+			&::before {
+				display: none;
+			}
+		}
+    	&.current-checkpoint {
+			&::before {
+				background-color: $red;
+			}
+			.inner-text {
+				color: $white;
+				background-color: $red;
+				border: 1px solid $red;
+			}
+			.checkpoint-desc {
+				color: $red;
+				font-family: $Raleway-Bold;
+			}
+		}
+	}
+	.inner-text {
+		height: 26px;
+		width: 26px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		font-family: $OpenSans-Bold;
+		font-size: 12px;
+		border: 1px solid $black999;
+		color: $black999;
+		background-color: $white;
+		position: absolute;
+		border-radius: 50%;
+		z-index: 13;
+	}
+}
+.checkpoint {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+
+.checkpoint-desc {
+	color: $black999;
+	font-family: $Raleway-Regular;
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-top: 15px;
+}
+
+.register-account-container {
+	.panel-group .panel {
+		box-shadow: none;
+		border-radius: 0px;
+	}
+	.or-content{
+		margin-top: 20px;
+		height: 35px;
+		width: 35px;
+		font-size: 12px;
+		&--register {
+			margin: initial;
+			&::after,
+			&::before {
+				display: none;
+			}
+		}
+
+		&--hidden {
+			@media(min-width: $sm) {
+				display: none;
+			}
+		}
+	}
+	.uploadbtn--sm {
+		margin-left: 0px;
+	}
+}
+
+.input--hoshi {
+	.select-dropdown {
+
+		width: 100%;
+		.select2-container {
+			width: 100% !important;
+		}
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+		font-family: $OpenSans-Semibold;
+		color: $black999;
+	}
+	.select2-container--default .select2-selection--single {
+		margin: 10px 0;
+		border: 0px;
+		border-bottom: 1px solid #ccc;
+	}
+}
+
+.inner-text {
+	height: 25px;
+	width: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $Raleway-Bold;
+	font-size: 12px;
+	border: 1px solid $black999;
+	color: $black999;
+	background-color: transparent;
+	border-radius: 50%;
+}
+.mdl-stepper {
+	box-shadow: none;
+}

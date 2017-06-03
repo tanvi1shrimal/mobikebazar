@@ -1,0 +1,156 @@
+doctype html
+
+- var page_name = "category"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Category
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body
+
+	//START: Header
+	include jade/header-before-login.jade
+	//START: Main
+	main
+		//START: Breadcrumb
+		ol.breadcrumb
+			li
+				a(href='#') YAMAHA FZ 16
+			li.active 21C1
+
+		section.category
+			.container-fluid
+				.row
+					h1.page-header.text-center Showing 10 categories
+					button.filter-tablet filter-by
+					.col-sm-4.col-md-3.filter-list
+						span.filter#filter-btn
+							button.text-capitalize.filter-button
+								i.mb-icon-close
+								| filter by
+							a(href="#").text-capitalize.clear clear all	
+						ul.filter-popup-list
+							li.filter-popup-list__item.active
+								h6#filter-item-1.text-capitalize brand
+								ul.popup-list.active
+									li.popup-list__item
+										label.margin0.text-capitalize.control.control--checkbox.fliter-size Bajaj
+											input(type='checkbox')
+											.control__indicator
+									li.popup-list__item 
+										label.margin0.text-capitalize.control.control--checkbox.fliter-size Hero
+											input(type='checkbox')
+											.control__indicator
+									li.popup-list__item
+										label.margin0.text-capitalize.control.control--checkbox.fliter-size Yamaha
+											input(type='checkbox')
+											.control__indicator
+							li.filter-popup-list__item
+								h6#filter-item-2.text-capitalize model
+								ul.popup-list
+									li.popup-list__item
+										label.text-capitalize.control.control--checkbox.fliter-size.margin0 CT100
+											input(type='checkbox')
+											.control__indicator
+									li.popup-list__item 
+										label.text-capitalize.control.control--checkbox.fliter-size.margin0 CT200
+											input(type='checkbox')
+											.control__indicator
+									li.popup-list__item
+										label.text-capitalize.control.control--checkbox.fliter-size.margin0 CT300
+											input(type='checkbox')
+											.control__indicator
+							li.filter-popup-list__item 
+								h6#filter-item-3.text-capitalize variant
+								ul.popup-list
+									li.popup-list__item
+										label.text-capitalize.control.control--checkbox.fliter-size.margin0 1CV44
+											input(type='checkbox')
+											.control__indicator
+									li.popup-list__item 
+										label.text-capitalize.control.control--checkbox.fliter-size.margin0 1CS55
+											input(type='checkbox')
+											.control__indicator
+									li.popup-list__item
+										label.text-capitalize.control.control--checkbox.fliter-size.margin0 1C5GG
+											input(type='checkbox')
+											.control__indicator
+					.col-sm-12.col-md-9
+
+						ul.category-block
+							li.col-sm-6.category-block__item(onclick="categoryListing();")
+								.category-info.text-center
+									.category-info__image
+										img.img-responsive(src='img/category-img2.png' alt='Category')
+									p.category-info__title Cylinder
+									span.category-info__subtitle 29 parts in this category
+									p.category-info__price Rs. 10,500
+									.category-info__buttons
+										a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+										a.button.button--link.button--underline(href='category-listing.html') VIEW ALL PARTS
+
+							li.col-sm-6.category-block__item(onclick="categoryListing();")
+								.category-info.text-center
+									.category-info__image
+										img.img-responsive(src='img/category-img1.png' alt='Category')
+									p.category-info__title Steering Handle &amp; Cable
+									span.category-info__subtitle 13 parts in this category
+									p.category-info__price Rs. 6,500
+									.category-info__buttons
+										a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+										a.button.button--link.button--underline(href='category-listing.html') VIEW ALL PARTS
+							li.col-sm-6.category-block__item(onclick="categoryListing();")
+								.category-info.text-center
+									.category-info__image
+										img.img-responsive(src='img/category-img1.png' alt='Category')
+									p.category-info__title Cylinder
+									span.category-info__subtitle 29 parts in this category
+									p.category-info__price Rs. 10,500
+									.category-info__buttons
+										a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+										a.button.button--link.button--underline(href='category-listing.html') VIEW ALL PARTS
+
+							li.col-sm-6.category-block__item(onclick="categoryListing();")
+								.category-info.text-center
+									.category-info__image
+										img.img-responsive(src='img/category-img1.png' alt='Category')
+									p.category-info__title Steering Handle &amp; Cable
+									span.category-info__subtitle 13 parts in this category
+									p.category-info__price Rs. 6,500
+									.category-info__buttons
+										a.button.button--primary-white.button--sm(href='my-cart.html') add to cart
+										a.button.button--link.button--underline(href='category-listing.html') VIEW ALL PARTS
+					.col-sm-12.show-more.text-center
+						a.button.button--link(href='#') SHOW MORE CATEGORIES
+	
+
+
+	//START: Login Modal- User
+	include jade/user-login-modal.jade
+
+
+	//START: Signup Modal- User
+	include jade/user-signup-modal.jade
+
+	
+	//START: Login Modal - Quickorder
+	include jade/quickOrder-login-modal.jade
+
+
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+	
+	
+	include jade/scripts.jade
+	+script(page_name)
+
+
+
+
+
+

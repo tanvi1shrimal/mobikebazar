@@ -1,0 +1,255 @@
+doctype html
+
+- var page_name = "payment"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - Payment
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.no-overflow.payment.payment--options
+	header.navbar.navbar--noborder.navbar-white.navbar-fixed-top
+		.container-fluid
+			
+			.navbar-header
+				a.navbar-brand(href='index.html')
+					img.logo__image.logo__image--reg(src="img/logo.svg", alt="Mobike Bazar")
+
+			ul.nav.navbar-nav.navbar-right.hidden-xs.secure-options
+				li.secure-options__list
+					i.mb-icon-secure-payment
+					| secure payment
+				li.secure-options__list
+					i.mb-icon-gaurantee
+					| 100% Genuine parts
+
+
+	//START: Main
+	main.main-cart.main-payment.main-height
+
+		//START: Progress Bar
+		section.status-process-bar
+			.container-fluid
+				.row
+					.orders-title.text-center.orders-title--cart.orders-title--border
+						ul#progressbar.bike-stepwizard__row.setup-panel
+
+							li.bike-stepwizard__step.current-step
+								a(href='my-cart.html').bike-stepwizard__link
+									i.mb-icon-right
+								p.bike-stepwizard__option cart
+
+							li.bike-stepwizard__step.current-step
+								a(href='my-delivery-address.html').bike-stepwizard__link 
+									i.mb-icon-right
+								p.bike-stepwizard__option delivery
+
+							li.bike-stepwizard__step.current-step
+								a.bike-stepwizard__link.last-child
+									i.mb-icon-right
+								p.bike-stepwizard__option payment
+						.bike-stepwizard__first-child
+		//START: Payment- Cart
+		section.payment-section
+			.container-fluid
+				.row
+					.col-sm-12.col-md-8.payments-options-container.clearfix
+						
+					
+						h4.tabs-header.tabs-header--payment Choose payment method
+
+						ul.nav.nav-tabs.tabs-left.payment-options-tabs
+							li.active.payment-options-tabs__list
+								a(href="#cash-on-delivery" data-toggle='tab').payment-options-tabs__link Cash on delivery
+							li.payment-options-tabs__list
+								a(href="#credit-card-options" data-toggle='tab').payment-options-tabs__link Credit / Debit / Net banking
+							li.payment-options-tabs__list
+								a(href="#neft-options" data-toggle='tab').payment-options-tabs__link NEFT / RTGS / IMPS
+							li.payment-options-tabs__list
+								a(href="#cheque-options" data-toggle='tab').payment-options-tabs__link Cheque
+						
+						.tab-content.payment-options-content.clearfix.col-md-8.row
+							//START: Cash on delivery
+							.tab-pane#cash-on-delivery.clearfix.payment-options-content__list.active
+								.col-md-12
+									.row
+										span.close-icon
+											i.mb-icon-close
+										h3.payment-options-content__heading CASH/CARD ON DELIVERY
+										p.payment-options-content__infoPara Pay with Cash or Card when your order is delivered
+										a(href="order-success.html").button.button--md.button--primary-white.place-order-btn.place-order-btn--delivery pay on delivery
+							//START: Credit Card Details
+							.tab-pane#credit-card-options.clearfix.payment-options-content__list
+								.col-md-12
+									.row
+										span.close-icon
+											i.mb-icon-close
+										h3.payment-options-content__heading Credit card / Debit card
+										p.payment-options-content__infoPara After clicking  “ pay now ” you will be redirected to a secured payment 
+										a(href="javascript:void(0)").button.button--md.button--primary-white.place-order-btn pay now
+
+							//START: NEFT/RTGS/IMPS Details
+							.tab-pane#neft-options.clearfix.payment-options-content__list 
+								.col-md-12
+									.row
+										h3.payment-options-content__heading.visible-xs Neft
+										div.clearfix
+											span.close-icon
+												i.mb-icon-close
+										h5.small-heading.small-heading--bank-details Bank details
+										.beneficiary-details
+											h3.beneficiary-name Beneficiary Name
+											h3.beneficiary-user-name Pankaj jain
+										.beneficiary-details
+											h3.beneficiary-name Beneficiary Account number
+											h3.beneficiary-user-name 000263552387
+										.beneficiary-details
+											h3.beneficiary-name Bank Name
+											h3.beneficiary-user-name ICICI
+										.beneficiary-details
+											h3.beneficiary-name IFSC Code
+											h3.beneficiary-user-name ICIH8342
+										.imps-details
+											h5.small-heading.small-heading--bank-details RTGS / NEFT / IMPS DETAILS
+											.form-group
+												.row.imps-details__row
+													.col-sm-7.col-lg-9
+														span.input.input--hoshi
+															input(type='text').input__field.input__field--hoshi
+															label(for='number').input__label.input__label--hoshi-color-1.input__label--hoshi
+																span.input__label-content--hoshi.input__label-content Enter UTR number here
+													.col-sm-5.col-lg-3
+														a(href="order-success.html").button.button--lg.button--primary-white.submit-btn submit
+											
+										p.check-payment-info.check-payment-info--bank-details
+											| * We will confirm your order once the payment is realized to  
+											span Mobikebazaar's 
+											| account. We will send an order confirmation message via Mail or SMS										
+							//START: Cheque payment  Details
+							.tab-pane#cheque-options.clearfix.payment-options-content__list 
+								.col-md-12
+									.row
+										// Cheque Details
+										div.clearfix
+											span.close-icon
+												i.mb-icon-close
+											h3.payment-options-content__heading.visible-xs Cheque
+										.payment-options-content__info 
+											p 
+												| All cheque payments must be made on the name of
+												em  MOBIKEBAZAAR.COM
+										h5.small-heading Select your bank
+										
+										form(method='post').cheque-details-form
+											.col-xs-12
+												.row
+													.form-group
+														label.control.control--radio.radio-inline.selected(for='hdfc')
+															img(src="img/banks/hdfc.png", alt="HDFC Bank").img-responsive
+															input(type='radio', name='radio', checked)#hdfc
+															.control__indicator.hidden-xs
+														label.control.control--radio.radio-inline(for='kotak')
+															img(src="img/banks/kotak.png", alt="ICICI Bank").img-responsive
+															input(type='radio', name='radio')#kotak
+															.control__indicator.hidden-xs
+														label.control.control--radio.radio-inline(for='indusind')
+															img(src="img/banks/indusind.png", alt="Indusind Bank").img-responsive
+															input(type='radio', name='radio', checked)#indusind
+															.control__indicator.hidden-xs
+														label.control.control--radio.radio-inline(for='sbi')
+															img(src="img/banks/sbi.png", alt="SBI Bank").img-responsive
+															input(type='radio', name='radio')#sbi
+															.control__indicator.hidden-xs
+
+											
+								
+										
+										h5.small-heading.small-heading--other Other banks
+										.form-group
+											span.input.input--hoshi
+												.select-dropdown
+													select.form-control.form-group__select.single-select2
+														option Select bank
+														option Axis Bank
+														option Bank of Baroda
+														option Canara Bank
+														option Karnataka Bank
+														option Maharastrha Bank
+														option Syndicate Bank
+										h5.small-heading.small-heading--check Check details
+										p.upload-info Upload a scanned image or click a image from your mobile of the cheque . Upload only Jpg or Pdf format
+										a(href="javascript:void(0)").pull-right.check-number-link See where cheque number is
+										.fileUpload.address__list--new.fileUpload--image
+											i.mb-icon-add-address
+											span Upload cheque image
+											input.upload(type='file')
+										
+										.col-sm-12
+											.row
+												h5.small-heading.small-heading--check-number Enter your check number*
+											
+												span.input.input--hoshi
+													input#cardholder-name.input__field.input__field--hoshi(type='text')
+													label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='cardholder-name')
+														span.input__label-content.input__label-content--hoshi Name on Card*
+										
+										.col-sm-12
+											.row
+												h5.small-heading.small-heading--check-number Date of issue*
+												
+												span.input.input--hoshi
+													input#cheque-date.input__field.input__field--hoshi(type='text')
+													label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='cheque-date')
+														span.input__label-content.input__label-content--hoshi DD/MM//YYYY*
+										p.check-payment-info 
+											| * We will confirm your order once the payment is realized to 
+											span Mobikebazaar”s 
+											| account. We will send an order confirmation message via Mail or SMS
+									a(href="javascript:void(0)").button.button--lg.button--primary-white.submit-btn submit
+
+							
+
+					
+					.col-sm-12.col-md-4
+						.row
+							.cart-details-container.cart-details-container--payment.clearfix.cart-details-container--grey
+								.col-sm-12
+									.cart-details
+										h5.cart-details__heading.cart-details__heading--order Your order
+										p.cart-details__info 
+											| Cart Total
+											span.pull-right.cart-details__price Rs. 8,600
+										
+										p.cart-details__info.cart-details__info--last-child
+											| Delivery charges
+											span.pull-right.cart-details__price Rs. 900
+										h4.cart-details__total.cart-details__total--total-price
+											| Total Payable
+											span.pull-right.cart-details__total-price Rs. 9,500
+
+										.terms-policy
+											
+
+											.delivery-adress-container
+												h5.cart-details__heading.cart-details__heading--delivered Deliver to
+												h5.cart-details__heading.cart-details__heading--customer-name Pankaj jain
+												p.customer-address 24 , Raheja apartment, Transport nagar,
+													br
+													| Jaipur - 302004
+													br
+													| Mobile - 9916204062
+												a(href="my-delivery-address.html").change-order Change address
+
+
+	//START: Footer cards
+
+	include jade/footer-after-login.jade
+
+	include jade/scripts.jade
+	+script(page_name)
+
+	

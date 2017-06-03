@@ -1,0 +1,327 @@
+doctype html
+
+- var page_name = "quickorder-page3"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - QuickOrder Page
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.after-login.no-overflow
+	//START: Header
+	include jade/header-before-login.jade
+
+	//START: Main
+	main
+		section.quickorder.section-quickorder-padding
+			.top-content
+				h1.page-header.page-header--quickorder Quick Order
+				.top-content__button.hidden-xs
+					button.button.button--primary-white.button--primary-red--border.button--md(type="button" data-toggle="modal" data-target="#addPartPopup") add part
+				.top-content__upload-links
+					ul.list-inline
+						li
+							a(data-toggle="modal" data-target="#uploadExcelSheetPopup")
+								i.mb-icon-upload-excel
+								span UPLOAD EXCEL SHEET
+						li
+							a(data-toggle="modal" data-target="#uploadImagesListingPopup")
+								i.mb-icon-upload-photo 
+								span.width55 UPLOAD IMAGE
+						li.help-icon.hidden-xs
+							a
+								i.mb-icon-help
+								span.hidden-sm.hidden-xs need help?	
+
+			.container
+				.row
+					.col-sm-12
+						
+						.middle-content.middle-content--listblock
+							.listblock__header
+								h3.listblock__title List 1
+								span.listblock__createtime Created 5 minutes ago
+								a.listblock__iconDelete
+									i.mb-icon-delete
+
+							.listblock__table
+								.listblock__tableWrapper
+									.listblock__thead.hidden-xs
+										.listblock__thead__row
+											.listblock__theadlist.listblock__theadlist--1
+												.listblock__theadlist--partNumber Part Number
+
+											.listblock__theadlist.listblock__theadlist--2
+												.listblock__theadlist--price Price
+
+											.listblock__theadlist.listblock__theadlist--3
+												.listblock__theadlist--partName Part Name
+
+											.listblock__theadlist.listblock__theadlist--4
+												.listblock__theadlist--brandModelVarient Brand, Model &amp; Variant
+
+											.listblock__theadlist.listblock__theadlist--5
+												.listblock__theadlist--quantity Quantity
+
+											.listblock__theadlist.listblock__theadlist--6
+												.listblock__theadlist--editDeleteOptions &nbsp;
+
+									.listblock__tbody
+										.listblock__tbody__row
+											.listblock__tbodylist.listblock__tbodylist--1
+												.listblock__tbodylist--partNumber 21C-E1400-00
+
+											.listblock__tbodylist.listblock__tbodylist--2
+												.listblock__tbodylist--price Rs. 4,300
+
+											.listblock__tbodylist.listblock__tbodylist--3
+												.listblock__tbodylist--partName Crankshaft Assy
+
+											.listblock__tbodylist.listblock__tbodylist--4
+												.listblock__tbodylist--brandModelVarient Yamaha FZ 16, 21C
+
+											.listblock__tbodylist.listblock__tbodylist--5
+												.listblock__tbodylist--quantity
+													.select-dropdown
+														select.form-control.form-group__select.single-quant
+															option 02
+															option 01
+											
+											.listblock__tbodylist.listblock__tbodylist--6
+												.listblock__tbodylist--editDeleteOptions
+													ul.list-inline
+														li
+															a(href='javasrcipt:void(0)')
+																i.mb-icon-pencil
+														li
+															a(href='javasrcipt:void(0)')
+																i.mb-icon-delete
+												.listblock__tbodylist--totalPrice.visible-xs Rs. 8,600
+
+											.listblock__tbodylist.listblock__tbodylist--7
+												.listblock__tbodylist--sellerInfoDesc
+													p View 
+														a.seller-text 2 sellers 
+														| selling the same product starting from 
+														span.seller-price Rs. 4,290
+
+										.listblock__tbody__row.listblock__tbody__row--withImageRow
+											.listblock__tbodylist.listblock__tbodylist--1
+												.listblock__tbodylist--partImage
+													img.img-responsive(src="img/model-img1.png" alt="part Image")
+													a.listblock__tbodylist--imageFullView.hidden-xs(href="img/model-img1.png" data-lightbox="quickorder-img1") Expand Image full size
+													a.listblock__tbodylist--imageFullView.visible-xs(href="img/model-img1.png" data-lightbox="quickorder-img1") Tap on image to expand 
+
+											.listblock__tbodylist.listblock__tbodylist--2.hidden-xs
+												.listblock__tbodylist--price
+
+											.listblock__tbodylist.listblock__tbodylist--3
+												.listblock__tbodylist--partName 
+
+											.listblock__tbodylist.listblock__tbodylist--4
+												.listblock__tbodylist--brandModelVarient Yamaha FZ 16, 21C
+												.listblock__tbodylist--brandModelVarientText Need chain sproket for this model.
+
+											.listblock__tbodylist.listblock__tbodylist--5
+												.listblock__tbodylist--quantity
+													.select-dropdown
+														select.form-control.form-group__select.single-quant
+															option 01
+															option 02
+											
+											.listblock__tbodylist.listblock__tbodylist--6
+												.listblock__tbodylist--editDeleteOptions
+													ul.list-inline
+														li
+															a(href='javasrcipt:void(0)')
+																i.mb-icon-pencil
+														li
+															a(href='javasrcipt:void(0)')
+																i.mb-icon-delete
+												.listblock__tbodylist--totalPrice.visible-xs Rs. 8,600
+
+											.listblock__tbodylist.listblock__tbodylist--7.hidden-xs
+												.listblock__tbodylist--pleaseNoteDesc
+													p 
+														span.please-note Please Note: 
+														| This image will be placed under enquiry mode in the cart
+
+										.listblock__tbody__row.listblock__tbody__row--withImageRow
+											.listblock__tbodylist.listblock__tbodylist--1
+												.listblock__tbodylist--partImage
+													img.img-responsive(src="img/quickorder/quickorder-img2.png" alt="part Image")
+													a.listblock__tbodylist--imageFullView.hidden-xs(href="img/quickorder/quickorder-img2.png" data-lightbox="quickorder-img1") Expand Image full size
+													a.listblock__tbodylist--imageFullView.visible-xs(href="img/quickorder/quickorder-img2.png" data-lightbox="quickorder-img1") Tap on image to expand 
+
+											.listblock__tbodylist.listblock__tbodylist--2.hidden-xs
+												.listblock__tbodylist--price
+
+											.listblock__tbodylist.listblock__tbodylist--3
+												.listblock__tbodylist--partName 
+
+											.listblock__tbodylist.listblock__tbodylist--4
+												.listblock__tbodylist--brandModelVarient Yamaha FZ 16, 21C
+												.listblock__tbodylist--brandModelVarientText Need chain sproket for this model.
+
+											.listblock__tbodylist.listblock__tbodylist--5
+												.listblock__tbodylist--quantity
+													.select-dropdown
+														select.form-control.form-group__select.single-quant
+															option 01
+															option 02
+											
+											.listblock__tbodylist.listblock__tbodylist--6
+												.listblock__tbodylist--editDeleteOptions
+													ul.list-inline
+														li
+															a(href='javasrcipt:void(0)')
+																i.mb-icon-pencil
+														li
+															a(href='javasrcipt:void(0)')
+																i.mb-icon-delete
+												.listblock__tbodylist--totalPrice.visible-xs Rs. 8,600
+
+											.listblock__tbodylist.listblock__tbodylist--7.hidden-xs
+												.listblock__tbodylist--pleaseNoteDesc
+													p 
+														span.please-note Please Note: 
+														| This image will be placed under enquiry mode in the cart
+
+
+
+
+								button.button.button--primary-red.button--primary-red--border.add-list-customizebtn.button--md.hidden-xs(type="button") Add List to cart
+								.middle-content__button.visible-xs
+									button.button.button--primary-white.button--primary-red--border.button--md(type="button" data-toggle="modal" data-target="#addPartPopup") add part
+
+	
+	//START: Footer
+	include jade/footer-before-login.jade
+	//START: Red Rectangle path
+	.red-rectangle.hidden-xs
+
+	//Upload Images Popup
+	#uploadImagesListingPopup.modal.fade.modal--fullxs.quickorder-commonPopup(role='dialog')
+		.modal-dialog(role='document')
+			.modal-content.modal-content--height
+				.modal-header
+					button.hidden-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-close.modal__close-icon
+					button.visible-xs.close(type='button', data-dismiss='modal', aria-label='Close')
+						i.mb-icon-left-arrow
+					h4.modal-title.modal-title--leftalign Upload Images
+				.modal-body
+					.uploadImage-content
+						ul
+							li.uploadImage-content__liting-row
+								.row.uploadImage-content__row-xs
+									.col-sm-4.uploadImage-content__image
+										.form-group
+											.productImageParts
+												img.img-responsive(src="img/quickorder/uploadimage1.png" alt="Product Image")
+									.col-sm-8.uploadImage-content__desc
+										.form-group
+											label.form-group__label.hidden-xs Add Description
+											textarea.form-group__control.form-group__control--textarea1
+									.clearfix
+									.col-sm-4.uploadImage-content__brand
+										.form-group
+											label.form-group__label Brand
+											select.form-group__select.single-select2
+												option Bajaj
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__model
+										.form-group
+											label.form-group__label Model
+											select.form-group__select.single-select2
+												option FZ16
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__varient
+										.form-group
+											label.form-group__label Variant
+											select.form-group__select.single-select2
+												option 21 C
+												option TVS
+												option Yamaha
+												option Suzuki
+									.uploadImage-content__separator
+
+							li.uploadImage-content__liting-row
+								.row.uploadImage-content__row-xs
+									.col-sm-4.uploadImage-content__image
+										.form-group
+											.productImageParts
+												img.img-responsive(src="img/quickorder/uploadimage2.png" alt="Product Image")
+									.col-sm-8.uploadImage-content__desc
+										.form-group
+											label.form-group__label.hidden-xs Add Description
+											textarea.form-group__control.form-group__control--textarea1
+									.clearfix
+									.col-sm-4.uploadImage-content__brand
+										.form-group
+											label.form-group__label Brand
+											select.form-group__select.single-select2
+												option Bajaj
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__model
+										.form-group
+											label.form-group__label Model
+											select.form-group__select.single-select2
+												option FZ16
+												option TVS
+												option Yamaha
+												option Suzuki
+									.col-sm-4.uploadImage-content__varient
+										.form-group
+											label.form-group__label Variant
+											select.form-group__select.single-select2
+												option 21 C
+												option TVS
+												option Yamaha
+												option Suzuki
+									.uploadImage-content__separator
+
+						.uploadImage-content__buttons.uploadImage-content__buttons--relative
+							a.button.button--link(href='javasrcipt:void(0);') add more photos
+							a.button.button--primary-white.button--sm(href='#') upload
+							
+
+				.modal-footer
+					.uploading-wrap__note.hidden-xs
+						p Please note:
+						ul.uploading-wrap__notelist.list-inline
+							li
+								span Upload max 10 images 
+							li
+								span Image size can be upto 1MB
+							li
+								span Upload only jpeg and pdf’s
+	
+	//START: User Login Modal- User
+	include jade/user-login-modal.jade
+
+	//START: Signup Modal- User
+	include jade/user-signup-modal.jade
+	//START: Login Modal - Quickorder
+	include jade/quickOrder-login-modal.jade
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+	
+	include jade/scripts.jade
+	+script(page_name)
+
+
+
+
+
+

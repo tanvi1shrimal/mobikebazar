@@ -1,0 +1,60 @@
+#userSignup.modal.fade.modal--fullxs.modal--loginSignup(tabindex='-1', role='dialog')
+	.modal-dialog(role='document')
+		.modal-content
+			.login-recovery-wrapper
+				.login-wrapper
+					.modal-header.modal-header--signup
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							i.mb-icon-close.modal__close-icon
+						h4.modal-title Sign up with MobikeBazar
+						.signup-options
+							p.signup-options__text Easily using 
+							.signup-options__social
+								a(href='jvascript:void(0);')
+									img(src="img/google-icon.svg" alt='Google').social-icon
+									span GOOGLE
+								a(href='jvascript:void(0);')
+									img(src="img/facebook-icon.svg" alt='Facebook').social-icon
+									span FACEBOOK
+
+							p.signup-options__text - or using email -
+					.modal-body
+						form.login-form(data-toggle="validator" role="form")
+							.row
+								.col-sm-12
+									.form-group
+										span.input.input--hoshi
+											input#email-field.input__field.input__field--hoshi(type='text' data-error="Please enter email address" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='email-field')
+												span.input__label-content.input__label-content--hoshi Email 
+										.help-block.with-errors
+								.col-sm-12
+									.form-group
+										span.input.input--hoshi
+											input#password-field.input__field.input__field--hoshi(type='password' data-error="Please enter password" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='password-field')
+												span.input__label-content.input__label-content--hoshi Choose Password
+										.help-block.with-errors
+								.col-sm-12
+									.form-group
+										span.input.input--hoshi
+											input#mobileNumber-field.input__field.input__field--hoshi(type='text' data-error="Please enter mobile number" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='mobileNumber-field')
+												span.input__label-content.input__label-content--hoshi Mobile number
+										.help-block.with-errors
+								.col-sm-12
+									.form-group.form-group--space
+										span.form-group__radiolabel I am a
+										label.control.control--radio Male
+											input(type="radio" name="gender")
+											.control__indicator
+										label.control.control--radio Female
+											input(type="radio" name="gender")
+											.control__indicator
+
+								.col-sm-12.form-button
+									button.button.button--primary-white.button--lg.btn-block Sign up
+								.col-sm-12.form-button
+									.form-group.clearfix
+										.form-bottom-link Already having account ? 
+											a.button.button--link(data-toggle="modal" data-target="#userLogin" data-dismiss='modal')   Login !

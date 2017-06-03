@@ -1,0 +1,115 @@
+.order-options {
+	background-color: $white;
+	padding: 0px 15px;
+	//margin: 12px;
+	
+
+	@media(min-width: $sm) {
+		padding: 0px;
+		float: left;
+		//width: 135px;
+		height: 100vh;
+		background-color: #faf9f9;
+		margin-top: 0px;
+		margin-right: 0px;
+		border-right: 1px solid #dfdfdf;
+		position: fixed;
+		//width: 18%;
+		width: 135px;
+		z-index: 3;
+		margin-top: 77px;
+		left: 0px;
+	}
+
+	@media(min-width: $md) {
+		width: 240px;
+	
+	}
+
+	&__list {
+		border-bottom: 1px solid $border;
+
+		&.active {
+			@media(min-width: $sm) {
+				background-color: $white;
+				&::before {
+					background-color: $red;
+				}
+			}
+			>a {
+				color: $red;
+				font-family: $OpenSans-Semibold;
+			}
+		}
+		
+
+		@media(min-width: $sm) {
+			transition: 300ms all;
+			position: relative;
+			&::before {
+				position: absolute;
+				content: '';
+				left: 0;
+				height: 100%;
+				width: 3px;
+				background-color: transparent;
+				top: 0;
+				left: 0px;
+			}
+
+			&:hover {
+				&::before {
+					background-color: $red;
+				}
+			}
+		}
+		@media(min-width: $md) {
+			
+			&:hover {
+				background-color: $white;
+			}
+		}
+	}
+
+	&__link {
+		
+		text-transform: capitalize;
+		font-size: 14px;
+		padding: 20px 15px;
+		font-family: $OpenSans-Regular;
+		font-weight: 600;
+		display: inline-block;
+		color: $black666;
+		transition: 300ms all;
+
+		@media(min-width: $sm) {
+			font-size: 12px;
+			padding: 26px 25px;
+			display: block;
+		}
+
+		@media(min-width: $md) {
+			padding: 15px 35px;
+		}
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+.btn-holder {
+	margin: 20px 0px;
+
+	@media(min-width: $sm) {
+		display: none;
+	}
+
+	a {
+		display: block;
+		text-align: center;
+
+		@media(min-width: $sm) {
+			display: inline-block;
+		}
+	}
+}

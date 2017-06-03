@@ -1,0 +1,98 @@
+.my-orders {
+	background-color: $greyf6f3f3;
+
+	@media(min-width: $sm) {
+		background-color: $white;
+	}
+}
+
+.user-profile {
+	background-color: $blue101f4e;
+	padding: 30px 0px;
+	margin: 30px 12px 0px;
+
+	@media(min-width: $sm) {
+		display: none;
+	}
+
+	&__name {
+		font-family: $Raleway-SemiBold;
+		font-size: 14px;
+		text-transform: capitalize;
+		color: $white;
+		border-radius: 2px;
+		margin: 0px;
+		margin-bottom: 15px;
+
+	}
+
+	&__email {
+		font-family: $Raleway-Regular;
+		color: $white;
+		font-size: 12px;
+		opacity: 0.8;
+		margin: 0px;
+		margin-bottom: 15px;
+	}
+}
+
+.edit-btn {
+	padding: 9px 13px;
+	font-size: 12px;
+}
+
+.container{
+	&--my-account {
+		@media(min-width: $sm) {
+			width: 100%;
+			padding: 0px;
+		}
+	}
+
+}
+
+.user-content {
+	padding: 25px 33px;
+	background-color: $greyf6f3f3;
+	color: $black333;
+	border: 1px solid #dfdfdf;
+	border-left: 0px;
+	border-right: 0px;
+	display: none;
+
+	@media(min-width: $sm) {
+		display: block;
+		position: fixed;
+		width: 100%;
+		z-index: 9;
+	}
+
+	&--trackorder {
+		@media(min-width: $sm) {
+			padding: 25px 0px;
+		}
+	}
+}
+
+.user-account {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 18px;
+	font-family: $Raleway-SemiBold;
+	margin-right: 15px;
+	
+}
+.user-name {
+	font-family: $OpenSans-Regular;
+	font-size: 14px;
+	text-transform: capitalize;
+
+}
+
+.register-bike-link {
+	text-transform: capitalize;
+	font-family: $OpenSans-Regular;
+	color: $red;
+	text-decoration: underline;
+	cursor: pointer;
+}

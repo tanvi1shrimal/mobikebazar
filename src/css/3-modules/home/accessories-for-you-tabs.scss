@@ -1,0 +1,100 @@
+.accessories{
+	
+	background-color: $white;
+
+	&__tabs {
+		position: relative;
+		padding: 40px 0px 0px;
+		text-align: center;
+		border: 0px;
+		position: relative;
+		max-width: 275px;
+		margin: 0 auto;
+
+		@media(min-width: $sm) {
+			padding: 30px 0px 0px;
+			max-width: 370px;
+		}
+
+		@media(min-width: $lg) {
+			padding: 45px 0px 0px;
+			max-width: 450px;
+		}
+
+		> li {
+			float: none;
+			display: inline-block;
+			margin-right: 25px;
+
+			@media(min-width: $sm) {
+					margin-right: 50px;
+				}
+
+			@media(min-width: $lg) {
+				margin-right: 65px;
+			}
+			&:nth-child(3) {
+				 
+				margin-right: 0px;
+				
+			}
+
+			>a {
+				border: 0px;
+				display: block;
+				padding: 0px;
+				transition: all 300ms ease-in-out;
+
+				
+				&:hover {
+					background-color: transparent;
+					color: $red;
+					border: 0px;
+				}
+			}
+
+			&.active {
+
+				position: relative;
+				> a {
+					color: $red;
+					border: 0px;
+					font-family: $OpenSans-Bold;
+					&:hover,
+					&:focus {
+						background-color: transparent;
+						color: $red;
+						border: 0px;
+					}
+
+				}
+			}
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: $black666;
+		font-size: 12px;
+		font-family: $OpenSans-Semibold;
+		
+
+		@media(min-width: $sm) {
+			font-size: 14px;
+		}
+		@media(min-width: $lg) {
+			font-size: 16px;
+		}
+	}
+	
+}
+
+#magic-line {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: $red;
+  transition: all 0.2s ease-in-out;
+}

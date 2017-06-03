@@ -1,0 +1,128 @@
+//CSS for upload Excelsheet Popup
+
+#uploadExcelSheetPopup {
+	.modal-footer {
+		border-top: 0;
+	}
+}
+.uploading-wrap {
+	padding: 15px;
+	@media(min-width: $sm) {
+		padding-top: 10px;
+		padding-bottom: 0;
+	}
+	&__content {
+		background-color: $white;
+		&--verticalalign {
+			@media(max-width: $xs-max) {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				height: calc(100vh - 130px);
+			}
+		}
+	}
+	&__nodata-text {
+		font-family: $OpenSans-Semibold;
+	    font-size: 13px;
+	    line-height: 23px;
+	    color: $black999;
+	    text-align: center;
+	    margin: 20px 0 15px;
+	    @media(min-width: $sm) {
+	    	color: $black666;
+	    	font-size: 14px;
+	    	line-height: 24px;
+	    }
+	    @media(min-width: $lg) {
+	    	font-size: 18px;
+	    	line-height: 28px;
+	    }
+	}
+	&__info {
+		font-family: $Raleway-Regular;
+		font-size: 13px;
+		line-height: 23px;
+		color: $black666;
+		margin: 20px 0 10px;
+	}
+	&__leftinfo {
+		font-family: $OpenSans-Regular;
+		color: $black666;
+		@media(min-width: $sm) {
+	    	font-size: 12px;
+			line-height: 22px;
+			margin: 0;
+	    }
+	    @media(min-width: $lg) {
+	    	font-size: 16px;
+			line-height: 26px;
+	    }
+		
+	}
+	&__img {
+		cursor: not-allowed;
+	}
+	&__download-sheetLink {
+		font-family: $Raleway-Bold;
+		font-size: 12px;
+		line-height: 22px;
+		text-decoration: none;
+		@media(min-width: $sm) {
+			font-family: $OpenSans-Regular;
+			text-transform: capitalize;
+			float: right;
+		}
+		@media(min-width: $lg) {
+	    	font-size: 16px;
+			line-height: 26px;
+	    }
+	}
+	&__note {
+		text-align: center;
+		padding-bottom: 15px;
+		p {
+			font-family: $OpenSans-Regular;
+			color: $black333;
+			font-size: 12px;
+			line-height: 22px;
+			
+			@media(min-width: $lg) {
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+	&__notelist {
+		li {
+			font-family: $OpenSans-Regular;
+			color: $black999;
+			position: relative;
+			padding: 0 20px;
+			span {
+				font-size: 12px;
+				line-height: 22px;
+				@media(min-width: $lg) {
+					font-size: 14px;
+					line-height: 24px;
+				}
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				right: 0;
+			    background: #ccc;
+			    width: 1px;
+			    top: 0;
+			    height: 100%;
+			}
+			&:last-child {
+				&:after {
+					content: none;
+				}
+			}
+		}
+	}
+}
+//- End CSS for upload Excelsheet Popup

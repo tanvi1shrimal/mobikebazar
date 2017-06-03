@@ -1,0 +1,56 @@
+#userLogin.modal.fade.modal--fullxs.modal--loginSignup(tabindex='-1', role='dialog')
+	.modal-dialog(role='document')
+		.modal-content
+			.login-recovery-wrapper
+				.login-wrapper
+					.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							i.mb-icon-close.modal__close-icon
+						h4.modal-title Login with MobikeBazar 
+					.modal-body
+						form.login-form(data-toggle="validator" role="form")
+							.row
+								.col-sm-12
+									.form-group
+										span.input.input--hoshi
+											input#email-field.input__field.input__field--hoshi(type='text' data-error="Please enter email address" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='email-field')
+												span.input__label-content.input__label-content--hoshi Email 
+										.help-block.with-errors
+								.col-sm-12
+									.form-group
+										span.input.input--hoshi
+											input#password-field.input__field.input__field--hoshi(type='password' data-error="Please enter password" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='password-field')
+												span.input__label-content.input__label-content--hoshi Choose Password
+										.help-block.with-errors
+
+								.col-sm-12.form-button
+									button.button.button--primary-white.button--lg.btn-block LOGIN
+								.col-sm-12.form-button
+									.form-group.clearfix
+										.form-bottom-link 
+											a.button.button--link.recover-pw-link(href='#')  Recover Password
+										.form-bottom-link New to mobike bazar? 
+											a.button.button--link(data-toggle="modal" data-target="#userSignup" data-dismiss='modal')  Sign Up !
+				.recover-pw-wrapper
+					.modal-header
+						h4.modal-title Recover Password 
+						p.modal-subtitle We will send you a recovery mail. Please enter your email ID
+					.modal-body
+						form.login-form(data-toggle="validator" role="form")
+							.row
+								.col-sm-12
+									.form-group
+										span.input.input--hoshi
+											input#email-field.input__field.input__field--hoshi(type='text' data-error="Please enter email address" required)
+											label.input__label.input__label--hoshi.input__label--hoshi-color-1(for='email-field')
+												span.input__label-content.input__label-content--hoshi Email
+										.help-block.with-errors
+							
+								.col-sm-12.form-button
+									button.button.button--primary-white.button--lg.btn-block recover password
+								.col-sm-12.form-button
+									.form-group.clearfix
+										.text-center
+											a.button.button--link.login-go-back(href='#')  LOGIN

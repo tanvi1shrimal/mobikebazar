@@ -1,0 +1,306 @@
+.modal {
+	&__dialog {
+		@media(min-width: $sm) {
+			padding: 0 15px;
+			margin-left: 0px;
+			margin-right: 0px;
+			width: 100%;
+		}
+		@media(min-width: $lg) {
+			margin-left: auto;
+			margin-right: auto;
+			width: 1000px;
+		}
+	}
+
+	&__body {
+		padding: 0 0 15px ;
+		#msform , #msform1{
+			margin: 0px;
+			@media(min-width: $sm) {
+				margin: auto;
+				padding: 10px 0 20px;
+			}
+		}
+		#progressbar {
+			margin-top: 30px; 
+			@media(min-width: $sm) {
+				margin-top: 0px;
+			}
+		}
+	}
+
+	&--header {
+		@media(min-width: $sm) {
+			padding: 0px 0 0px;
+		}
+	}
+
+	&__title {
+		margin: 20px 0 20px !important;
+		font-family: $Raleway-SemiBold !important;	
+		
+		@media(max-width: $xs-max) {
+			font-size: 20px !important;	
+			margin: 5px 0 5px !important;
+		}
+	}
+	.close {
+		&--closebike {
+			@media(max-width: $xs-max) {
+				top: 18px !important;
+			}
+		}
+	}
+	&__content {
+		border: 0px;
+		@media(min-width: $md) {
+			width: 665px;
+			margin: 0 auto;
+		}
+	}
+}
+
+.setup-content .bike-brand__unit {
+	margin-left: 0px;
+	padding: 15px;
+}
+
+
+.bike-stepwizard {
+	&__row {
+		display: flex;
+	}
+	&__step {
+		flex-direction: column;
+		align-items: center;
+	    display: flex;
+	    position: relative;
+	    flex: 1;
+	    pointer-events: none;
+	    transition: 0.2s opacity ease;
+	    &.current-step {
+	    	pointer-events: all;
+	    }
+	}
+	&--first {
+		flex: 0;
+	}
+
+	
+}
+
+
+//CSS for steps list wizard
+#step-1 {
+	.bike-brand__wrap {
+		@media(min-width: $sm) {
+			width: 705px;
+			margin: 0 auto;
+		}
+	}
+	.bike-scrollbox {
+		position: relative;
+		height: 306px;
+		margin-top: 50px;
+
+		@media(min-width: $sm) {
+			height: 210px;
+			margin-top: 40px;
+		}
+		&--noscrollbar {
+			height: auto;
+		}
+	}
+}
+#step-2 {
+	.bike-scrollbox {
+		position: relative;
+		height: 306px;
+		margin-top: 50px;
+
+		@media(min-width: $sm) {
+			height: 310px;
+			margin-top: 40px;
+		}
+		.bike-brand__wrap {
+			@media(max-width: $xs-max) {
+				margin-left: auto;
+				margin-right: auto;
+				width: 320px;
+			}
+		}
+	}
+}
+#step-3 {
+	.bike-scrollbox {
+		position: relative;
+		height: 100%;
+		margin-top: 50px;
+
+		@media(min-width: $sm) {
+			margin-top: 40px;
+		}
+	}
+}
+#step-4 {
+	.bike-scrollbox {
+		height: 350px;
+		position: relative;
+		@media(min-width: $sm) {
+			height: 520px;
+		}
+		@media(min-width: $md) {
+			height: 560px;
+		}
+	} 
+}
+
+.bike-register {
+	text-align: center;
+	.modal {
+		&__dialog {
+			@media(min-width: $sm) {
+				width: 600px;
+			}
+			@media(min-width: $md	) {
+				width: 696px;
+			}
+		}
+	}
+	
+	&__info {
+		font-size: 14px;
+		font-family: $OpenSans-Regular;
+		color: $black333;
+		margin: 0px;
+		margin-top: 20px;
+		margin-bottom: 40px;
+
+		@media(min-width: $sm) {
+			font-size: 20px;
+		}
+		@media(min-width: $md) {
+			font-size: 20px;
+		}
+	}
+
+	&__later {
+		text-transform: uppercase;
+		color: $red;
+		font-size: 12px;
+		font-family: $Raleway-Bold;
+		text-decoration: underline;
+
+		margin-top: 35px;
+		margin-bottom: 45px;
+		display: block;
+		@media(min-width: $md) {
+			font-size: 14px;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		&:hover,
+		&:active,
+		&:visited {
+			color: $red;
+		}
+	}
+
+	&__form {
+		padding: 25px 0;
+		@media(min-width: $sm) {
+			padding: 40px 0;
+		}
+	}
+	
+}
+#register-bike-final-reg {
+	.bike-register {
+		&__info {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.or-content {
+	font-size: 12px;
+	font-family: $OpenSans-Semibold;
+	color: $black666;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	border: 1px solid $border;
+	position: relative;
+	margin: 0px auto;
+	box-shadow: 0 0 7px 0 rgba(0,0,0,0.2);
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media(min-width: $md) {
+		height: 50px;
+		width: 50px;
+	}
+
+
+	&::after,
+	&::before {
+		position: absolute;
+		content: '~';
+		font-size: 20px;
+		color: $black999;
+		top: 50%;
+		transform: translate(0,-50%);
+
+	}
+	&::before {
+		left: -20px;
+	}
+
+	&::after {
+		right: -20px;
+
+	}
+
+	@media(min-width: $md) {
+		font-size: 16px;
+	}
+}
+
+i.info {
+	font-size: 14px;
+	font-family: $OpenSans-Light;
+	color: $black333;
+	display: block;
+	margin-bottom: 30px;
+	font-style: italic;
+
+	+a {
+		margin-bottom: 15px;
+	}
+}
+//banner touch indication
+.visited{
+	box-shadow: 0px 0px 0px 3px red;
+}
+.mb-how-it-works-list{
+	@include flex-box();	
+	li{
+		margin-right:30px;
+		&:last-child{
+			margin-right:0;
+		}
+		a{
+			display: inline-block;
+			color:$white;
+			font-size:14px;
+			line-height: 24px;
+		}
+	}
+}
+.reach-us{
+	display:flex;
+	align-items:center;
+}

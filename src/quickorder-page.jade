@@ -1,0 +1,72 @@
+doctype html
+
+- var page_name = "quickorder-page"
+
+head
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	meta(http-equiv="x-ua-compatible" content="IE=10")
+	title MobikeBazar - QuickOrder Page
+	link(rel="stylesheet", href="css/main.css")
+	link(rel="shortcut icon", href="img/favicon.ico")
+	script(src='js/plugins/modernizr.js')
+
+body.after-login
+	//START: Header
+	include jade/header-before-login.jade
+		
+	//START: Main
+	main
+		section.quickorder.section-quickorder-padding
+			.top-content.top-content--borderno
+				h1.page-header.page-header--quickorder Quick Order
+				.top-content__button.hidden-xs
+					a.button.button--primary-white.button--primary-red--border.button--md(href="quickorder-page-2.html") CREATE LIST
+				.top-content__upload-links
+					ul.list-inline
+						li
+							a
+								i.mb-icon-upload-excel
+								span UPLOAD EXCEL SHEET
+						li
+							a
+								i.mb-icon-upload-photo
+								span.width55 UPLOAD IMAGE
+						li.help-icon.hidden-xs
+							a
+								i.mb-icon-help
+								span.hidden-sm.hidden-xs need help?
+
+			.container
+				.row
+					.col-sm-12
+						
+						.middle-content.middle-content--verticallycenter
+							.no-data.text-center
+								p Your ‘List’ is empty right now
+								span Add part, upload excel sheet or image to your list.
+								.middle-content__button.visible-xs
+									a.button.button--primary-white.button--primary-red--border.button--md(href="quickorder-page-2.html") CREATE LIST
+
+	//START: Footer
+	include jade/footer-before-login.jade
+	
+	//START: User Login Modal- User
+	include jade/user-login-modal.jade
+
+	//START: Signup Modal- User
+	include jade/user-signup-modal.jade
+
+	//START: Login Modal - Quickorder
+	include jade/quickOrder-login-modal.jade
+	
+	//START: Search Overlay Modal
+	include jade/search-overlay.jade
+	
+	include jade/scripts.jade
+	+script(page_name)
+
+
+
+
+
